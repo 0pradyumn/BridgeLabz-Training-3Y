@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3 - Pradyumn Singh</title>
+</head>
+<body>
+    <!-- TASK 1: Multi-section Resume Page -->
+    <div id="task-1">
+        <header>
+            <h1>Pradyumn Singh</h1>
+            <p>Email: pradyumn.singh@example.com | Phone: +91 98765 43210</p>
+            <p>Location: Mathura, Uttar Pradesh, India</p>
+        </header>
+        <nav>
+            <a href="#about">About</a> |
+            <a href="#skills">Skills</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#education">Education</a>
+        </nav>
+        <main>
+            <section id="about">
+                <h2>About Me</h2>
+                <p>I am a full-stack software developer and startup founder interested in esports, modern web development, and competitive programming.</p>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>React and Next.js</li>
+                    <li>Git and GitHub</li>
+                </ul>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <ol>
+                    <li>arenaZ4 Esports Platform</li>
+                    <li>Competitive Programming Practice Portal</li>
+                    <li>Personal Developer Portfolio</li>
+                </ol>
+            </section>
+            <section id="education">
+                <h2>Education</h2>
+                <table border="1">
+                    <tr><th>Course</th><th>Institute</th><th>Year</th></tr>
+                    <tr><td>Bachelor of Technology</td><td>ABC Institute of Technology</td><td>2026</td></tr>
+                    <tr><td>Senior Secondary</td><td>XYZ Public School</td><td>2022</td></tr>
+                </table>
+            </section>
+        </main>
+        <footer><p>&copy; 2026 Pradyumn Singh. All rights reserved.</p></footer>
+    </div>
+
+    <!-- TASK 2: Product Catalog Page -->
+    <div id="task-2">
+        <h1>Online Store Product Catalog</h1>
+        <table border="1">
+            <caption>Featured Products</caption>
+            <tr><th>Product Name</th><th>Description</th><th>Price</th><th>Availability</th></tr>
+            <tr>
+                <td><img src="https://via.placeholder.com/100" alt="Gaming keyboard"> Gaming Keyboard</td>
+                <td>Mechanical keyboard with RGB lighting.</td><td>&#8377;2,499</td><td rowspan="2">In Stock</td>
+            </tr>
+            <tr>
+                <td><img src="https://via.placeholder.com/100" alt="Gaming mouse"> Gaming Mouse</td>
+                <td>High-precision mouse for competitive gaming.</td><td>&#8377;1,299</td>
+            </tr>
+            <tr><td colspan="4">Free delivery on orders above &#8377;999.</td></tr>
+        </table>
+    </div>
+
+    <!-- TASK 3: Course Registration Form -->
+    <div id="task-3">
+        <h1>Course Registration</h1>
+        <form>
+            <fieldset>
+                <legend>Student Information</legend>
+                <p><label for="student-name">Name:</label> <input id="student-name" type="text" name="name" required></p>
+                <p><label for="student-email">Email:</label> <input id="student-email" type="email" name="email" required></p>
+                <p><label for="course">Select Course:</label>
+                    <select id="course" name="course">
+                        <option value="html">HTML Fundamentals</option>
+                        <option value="javascript">JavaScript Programming</option>
+                        <option value="web-development">Full-stack Web Development</option>
+                    </select>
+                </p>
+                <p><input type="submit" value="Register"></p>
+            </fieldset>
+        </form>
+        <table border="1">
+            <caption>Available Course Schedules</caption>
+            <tr><th>Day</th><th>Time</th><th>Instructor</th></tr>
+            <tr><td>Monday</td><td>10:00 AM - 12:00 PM</td><td>Mr. Sharma</td></tr>
+            <tr><td>Wednesday</td><td>2:00 PM - 4:00 PM</td><td>Ms. Verma</td></tr>
+            <tr><td>Friday</td><td>11:00 AM - 1:00 PM</td><td>Mr. Kumar</td></tr>
+        </table>
+    </div>
+
+    <!-- TASK 4: Company Layout Page Using Block-level Elements -->
+    <div id="task-4">
+        <header><h1>CodeCraft Technologies</h1></header>
+        <nav><a href="#company-about">About</a> | <a href="#services">Services</a> | <a href="#company-contact">Contact</a></nav>
+        <main>
+            <section id="company-about"><h2>About the Company</h2><p>CodeCraft Technologies builds reliable digital products for growing businesses.</p></section>
+            <section id="services"><h2>Services Offered</h2><ul><li>Web Application Development</li><li>Mobile Application Development</li><li>Cloud Consulting</li></ul></section>
+        </main>
+        <aside><blockquote>“Innovation begins when technology solves a real problem.”</blockquote><p>- The CEO</p></aside>
+        <footer id="company-contact"><p>Email: contact@codecraft.example | Address: Mathura, Uttar Pradesh, India</p></footer>
+    </div>
+
+    <!-- TASK 5: Nested University, Departments, Courses, and Topics List -->
+    <div id="task-5">
+        <h1>University Academic Structure</h1>
+        <ul>
+            <li>University of Technology
+                <ul>
+                    <li>Department of Computer Science
+                        <ol>
+                            <li>Web Development
+                                <ul><li>HTML</li><li>Accessibility</li><li>Semantic Elements</li></ul>
+                            </li>
+                            <li>Data Structures
+                                <ul><li>Arrays</li><li>Linked Lists</li><li>Trees</li></ul>
+                            </li>
+                        </ol>
+                    </li>
+                    <li>Department of Electronics
+                        <ol>
+                            <li>Digital Electronics
+                                <ul><li>Logic Gates</li><li>Flip-flops</li></ul>
+                            </li>
+                            <li>Microprocessors
+                                <ul><li>Architecture</li><li>Instruction Sets</li></ul>
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- TASK 6: Restaurant Menu Page -->
+    <div id="task-6">
+        <header><h1>The Royal Plate Restaurant</h1></header>
+        <nav><a href="#starters">Starters</a> | <a href="#main-course">Main Course</a> | <a href="#desserts">Desserts</a></nav>
+        <section id="starters"><h2>Starters</h2><table border="1"><tr><th>Dish Name</th><th>Description</th><th>Price</th></tr><tr><td>Paneer Tikka</td><td>Grilled cottage cheese with spices.</td><td>&#8377;220</td></tr><tr><td>Spring Rolls</td><td>Crispy rolls with vegetables.</td><td>&#8377;180</td></tr></table></section>
+        <section id="main-course"><h2>Main Course</h2><table border="1"><tr><th>Dish Name</th><th>Description</th><th>Price</th></tr><tr><td>Butter Paneer</td><td>Paneer cooked in a creamy tomato gravy.</td><td>&#8377;320</td></tr><tr><td>Vegetable Biryani</td><td>Fragrant rice with seasonal vegetables.</td><td>&#8377;280</td></tr></table></section>
+        <section id="desserts"><h2>Desserts</h2><table border="1"><tr><th>Dish Name</th><th>Description</th><th>Price</th></tr><tr><td>Gulab Jamun</td><td>Soft milk-solid dumplings in syrup.</td><td>&#8377;120</td></tr><tr><td>Ice Cream</td><td>Choice of vanilla or chocolate.</td><td>&#8377;100</td></tr></table></section>
+        <footer><p>Contact: +91 98765 43210 | Mathura, Uttar Pradesh</p></footer>
+    </div>
+
+    <!-- TASK 7: Conference Schedule Page -->
+    <div id="task-7">
+        <h1>Web Technology Conference Schedule</h1>
+        <table border="1">
+            <caption>Conference Sessions</caption>
+            <thead><tr><th>Session</th><th>Time</th><th>Topic</th><th>Speaker</th></tr></thead>
+            <tbody>
+                <tr><td rowspan="2">Morning</td><td>9:00 AM</td><td>Opening Keynote</td><td>Dr. Mehta</td></tr>
+                <tr><td>10:30 AM</td><td>Semantic HTML</td><td>Ms. Rao</td></tr>
+                <tr><td>Afternoon</td><td>2:00 PM</td><td>Modern Web Development</td><td>Mr. Singh</td></tr>
+                <tr><td>Evening</td><td>5:00 PM</td><td>Future of Technology</td><td>Dr. Kapoor</td></tr>
+            </tbody>
+            <tfoot><tr><td colspan="4">Please arrive 15 minutes before each session.</td></tr></tfoot>
+        </table>
+    </div>
+
+    <!-- TASK 8: Student Report Page -->
+    <div id="task-8">
+        <h1 title="Student Academic Report">Sunrise Public School</h1>
+        <h2>Student: Pradyumn Singh</h2>
+        <table border="1" title="Marks obtained in five subjects">
+            <tr><th rowspan="2">Subject Group</th><th>Subject</th><th>Marks</th><th>Maximum Marks</th></tr>
+            <tr><td>English</td><td>88</td><td>100</td></tr>
+            <tr><td rowspan="4">Academic Subjects</td><td>Mathematics</td><td>92</td><td>100</td></tr>
+            <tr><td>Science</td><td>85</td><td>100</td></tr>
+            <tr><td>Social Science</td><td>81</td><td>100</td></tr>
+            <tr><td>Computer Science</td><td>95</td><td>100</td></tr>
+            <tr><td colspan="2">Total</td><td>441</td><td>500</td></tr>
+            <tr><td colspan="2">Percentage</td><td colspan="2">88.2%</td></tr>
+        </table>
+    </div>
+
+    <!-- TASK 9: Travel Destination Page -->
+    <div id="task-9">
+        <header><h1>Top 3 Travel Destinations</h1></header>
+        <main>
+            <article><h2>Paris, France</h2><img src="https://via.placeholder.com/250x150" alt="Paris destination"><p>Paris is famous for its art, architecture, cuisine, and beautiful landmarks.</p><blockquote>“Paris is always a good idea.”</blockquote></article>
+            <article><h2>Kyoto, Japan</h2><img src="https://via.placeholder.com/250x150" alt="Kyoto destination"><p>Kyoto offers peaceful temples, traditional gardens, and rich cultural experiences.</p><blockquote>“Kyoto combines history with timeless beauty.”</blockquote></article>
+            <article><h2>Manali, India</h2><img src="https://via.placeholder.com/250x150" alt="Manali destination"><p>Manali is a scenic mountain destination known for adventure and natural landscapes.</p><blockquote>“The mountains make every journey memorable.”</blockquote></article>
+        </main>
+        <aside><h2>Travel Tips</h2><ul><li>Plan your itinerary early.</li><li>Carry essential documents.</li><li>Respect local culture.</li><li>Keep emergency contacts available.</li></ul></aside>
+        <footer><p>&copy; 2026 Travel Explorer</p></footer>
+    </div>
+
+    <!-- TASK 10: Dropdown-based Selection Page -->
+    <div id="task-10">
+        <h1>Travel Selection</h1>
+        <form>
+            <p><label for="country">Country:</label><select id="country" name="country"><option selected>India</option><option>Japan</option><option>France</option></select></p>
+            <p><label for="state">State:</label><select id="state" name="state"><option selected>Uttar Pradesh</option><option>Maharashtra</option><option>Rajasthan</option></select></p>
+            <p><label for="city">City:</label><select id="city" name="city"><option selected>Mathura</option><option>Agra</option><option>Lucknow</option></select></p>
+            <p><label for="place">Favorite Tourist Place:</label><select id="place" name="place"><option selected>Taj Mahal</option><option>Vrindavan</option><option>Fatehpur Sikri</option></select></p>
+        </form>
+        <p>My choices are India, Uttar Pradesh, Mathura, and the Taj Mahal as my favorite tourist place.</p>
+    </div>
+
+    <!-- TASK 11: News Layout Page -->
+    <div id="task-11">
+        <header><h1>Daily Tech Bulletin</h1></header>
+        <nav><a href="#sports">Sports</a> | <a href="#technology">Technology</a> | <a href="#politics">Politics</a></nav>
+        <main>
+            <article id="sports"><h2>Esports Gains New Fans</h2><p><time datetime="2026-08-19">August 19, 2026</time></p><p>Competitive gaming continues to attract players and viewers around the world.</p><p>Source: <a href="https://example.com/sports">Daily Sports Desk</a></p></article>
+            <article id="technology"><h2>Web Development Keeps Evolving</h2><p><time datetime="2026-08-18">August 18, 2026</time></p><p>Developers are building faster and more accessible experiences for users.</p><p>Source: <a href="https://example.com/technology">Technology Desk</a></p></article>
+            <article id="politics"><h2>Digital Governance Expands</h2><p><time datetime="2026-08-17">August 17, 2026</time></p><p>Public services are increasingly adopting digital tools and online platforms.</p><p>Source: <a href="https://example.com/politics">Political Desk</a></p></article>
+        </main>
+        <aside><h2>Popular Topics</h2><ul><li>Artificial Intelligence</li><li>Esports</li><li>Startups</li><li>Digital India</li></ul></aside>
+        <footer><p>Contact: editor@dailybulletin.example | &copy; 2026 Daily Tech Bulletin</p></footer>
+    </div>
+
+    <!-- TASK 12: Quotation Showcase Page -->
+    <div id="task-12">
+        <h1>Quotation Showcase</h1>
+        <section><h2>Perseverance</h2><blockquote>“It always seems impossible until it is done.”</blockquote><p><cite>Nelson Mandela</cite></p></section>
+        <section><h2>Knowledge</h2><blockquote>“The only true wisdom is in knowing you know nothing.”</blockquote><p><cite>Socrates</cite></p></section>
+        <section><h2>Creativity</h2><blockquote>“Creativity is intelligence having fun.”</blockquote><p><cite>Albert Einstein</cite></p></section>
+        <p>Quotes inspire people by expressing meaningful ideas in memorable words and encouraging reflection, courage, and positive action.</p>
+    </div>
+
+    <!-- TASK 13: Blog Layout Page -->
+    <div id="task-13">
+        <header><h1>Pradyumn's Developer Blog</h1></header>
+        <nav><a href="#home">Home</a> | <a href="#blogs">Blogs</a> | <a href="#blog-about">About</a></nav>
+        <main id="blogs">
+            <article><h2>My First Blog</h2><p><time datetime="2026-08-01">August 1, 2026</time></p><p>Today I started documenting my journey as a developer and entrepreneur.</p><blockquote>“Every expert was once a beginner.”</blockquote></article>
+            <article><h2>Things I Learned This Week</h2><p><time datetime="2026-08-19">August 19, 2026</time></p><p>This week I learned how semantic HTML improves structure, clarity, and accessibility.</p><blockquote>“Learning never exhausts the mind.”</blockquote></article>
+        </main>
+        <footer><p>Written by Pradyumn Singh</p></footer>
+    </div>
+
+    <!-- TASK 14: Movie Database Page -->
+    <div id="task-14">
+        <h1>Movie Database</h1>
+        <table border="1" title="Movie database containing popular films">
+            <caption>Popular Movies</caption>
+            <tr><th>Movie Name</th><th>Genre</th><th>Year</th><th>IMDB Rating</th><th>Link</th></tr>
+            <tr><td>Inception</td><td>Science Fiction</td><td>2010</td><td>8.8</td><td><a href="https://www.imdb.com/title/tt1375666/">IMDB</a></td></tr>
+            <tr><td>The Dark Knight</td><td>Action</td><td>2008</td><td>9.0</td><td><a href="https://www.imdb.com/title/tt0468569/">IMDB</a></td></tr>
+            <tr><td colspan="5">More movies will be added soon.</td></tr>
+        </table>
+        <p><small>Note: Ratings are provided for educational demonstration only.</small></p>
+    </div>
+
+    <!-- TASK 15: Portfolio Layout Page -->
+    <div id="task-15">
+        <header><h1>Pradyumn Singh</h1><p>Full-stack Software Developer and Startup Founder</p></header>
+        <nav><a href="#portfolio-about">About Me</a> | <a href="#portfolio-skills">Skills</a> | <a href="#portfolio-projects">Projects</a> | <a href="#portfolio-contact">Contact</a></nav>
+        <main>
+            <section id="portfolio-about"><h2>About Me</h2><p>I build modern web applications and am developing arenaZ4, a competitive esports platform.</p><blockquote>“Build useful things and keep improving.”</blockquote></section>
+            <section id="portfolio-skills"><h2>Skills</h2><ul><li>HTML and Web Accessibility</li><li>React and Next.js</li><li>TypeScript and JavaScript</li><li>Git and GitHub</li><li>Full-stack Application Architecture</li></ul></section>
+            <section id="portfolio-projects"><h2>Projects</h2><ol><li>arenaZ4 Esports Platform</li><li>Developer Portfolio</li><li>Competitive Programming Projects</li></ol></section>
+        </main>
+        <aside id="portfolio-contact"><h2>Contact Info</h2><p>Email: pradyumn.singh@example.com</p><p>Phone: +91 98765 43210</p><p>LinkedIn: <a href="https://www.linkedin.com/">Pradyumn Singh</a></p></aside>
+        <footer><p>&copy; 2026 Pradyumn Singh. Thank you for visiting.</p></footer>
+    </div>
+</body>
+</html>
