@@ -1,0 +1,756 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+.q-label {
+  text-align: center;
+  font-weight: bold;
+  background-color: #111827;
+  color: #fbbf24;
+  padding: 0.6em;
+  font-size: 0.95rem;
+}
+
+.question-block {
+  border-bottom: 6px solid #111827; 
+}
+
+
+/* =============================================================
+   QUESTION 1: Personal Portfolio Homepage
+   ============================================================= */
+
+.q1-header {
+  height: 70px;
+  background-color: #1f2937;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+ 
+}
+
+.q1-name {
+  font-size: 1.5rem; 
+}
+
+.q1-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1.5em; 
+}
+
+.q1-nav a:hover {
+  color: #93c5fd;
+}
+
+.q1-main {
+  padding: 2em 5%;
+  background-color: #f4f6f8;
+}
+
+.q1-bio {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  background-color: #ffffff;
+  padding: 2em;
+  border-radius: 8px;
+}
+
+.q1-pic {
+  width: 150px; /* px unit */
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #1f2937;
+}
+
+.q1-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 60%; /* % unit */
+}
+
+.q1-footer {
+  background-color: #1f2937;
+  color: #ffffff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+
+/* =============================================================
+   QUESTION 2: Multi-section Informational Page (About Jaipur)
+   ============================================================= */
+
+.q2-header {
+  background-color: #7c2d12;
+  color: #fff;
+  padding: 1.5em 2em;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
+.q2-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.q2-nav {
+  background-color: #451a03;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 0.8em 0;
+}
+
+.q2-nav a {
+  color: #fed7aa;
+  text-decoration: none;
+}
+
+.q2-section {
+  width: 100%;
+  padding: 4em 10%;
+  border-bottom: 4px solid #78350f;
+  color: #f5f5f5;
+  font-family: Georgia, serif;
+}
+
+.q2-section h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.7em;
+}
+
+.q2-section p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+.q2-gradient-linear {
+  background: linear-gradient(135deg, #f97316, #7c2d12);
+}
+
+.q2-gradient-radial {
+  background: radial-gradient(circle at top left, #fb923c, #451a03 80%);
+}
+
+.q2-parallax-one {
+  background-image: url("https://via.placeholder.com/1200x800");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.q2-parallax-two {
+  background-image: url("https://via.placeholder.com/1200x900");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.q2-footer {
+  background-color: #1c1917;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 1.2em 0;
+  font-size: 0.9rem;
+}
+
+
+/* =============================================================
+   QUESTION 3: Team Members Layout (3 column cards)
+   ============================================================= */
+
+.q3-title {
+  text-align: center;
+  padding: 1em 0;
+  color: #1e293b;
+  background-color: #eef2f7;
+}
+
+.q3-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5em;
+  background-color: #eef2f7;
+  padding: 0 2em 2em;
+}
+
+.q3-card {
+  background-color: #ffffff;
+  flex: 1 1 260px;
+  max-width: 300px;
+  padding: 1.5em;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.q3-name {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin-bottom: 0.3em;
+}
+
+.q3-role {
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 0.6em;
+}
+
+.q3-desc {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.q3-card-lead {
+  background-color: #fef3c7;
+  border: 2px dashed #d97706;
+}
+
+/* responsive - single column below 600px, question 3 requirement */
+@media (max-width: 600px) {
+  .q3-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .q3-card {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+
+/* =============================================================
+   QUESTION 4: Long Article Page
+   ============================================================= */
+
+.q4-header {
+  text-align: center;
+  padding: 2em 5% 1em;
+  border-bottom: 2px solid #d4a373;
+  font-family: 'Times New Roman', serif;
+  background-color: #fffaf0;
+}
+
+.q4-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.4em;
+}
+
+.q4-sub {
+  font-style: italic;
+  color: #6b6b6b;
+}
+
+.q4-body {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 2em 5%;
+  font-family: 'Times New Roman', serif;
+  color: #2b2b2b;
+  background-color: #fffaf0;
+}
+
+.q4-body p {
+  margin-bottom: 1.4em;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+
+.q4-body p::first-letter {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #b45309;
+  float: left;
+  margin-right: 0.05em;
+  line-height: 1;
+}
+
+
+.q4-body p::first-line {
+  font-weight: bold;
+}
+
+.q4-highlight {
+  background-color: #fde68a;
+  padding: 0 0.2em;
+  border-radius: 2px;
+}
+
+.q4-quote {
+  border-left: 5px solid #b45309;
+  background-color: #fef3e2;
+  padding: 1em 1.5em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: #4b2e0f;
+}
+
+
+/* =============================================================
+   QUESTION 5: Pricing Table
+   ============================================================= */
+
+.q5-title {
+  text-align: center;
+  padding: 1.5em 0 1em;
+  color: #e2e8f0;
+  background-color: #0f172a;
+}
+
+.q5-container {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #0f172a;
+  padding: 0 5% 3em;
+}
+
+.q5-plan {
+  flex: 1;
+  max-width: 300px;
+  background-color: #1e293b;
+  border: 2px solid #334155;
+  border-radius: 12px;
+  padding: 2em 1.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  color: #e2e8f0;
+}
+
+.q5-plan:hover {
+  transform: scale(1.05);
+  background-color: #273449;
+}
+
+.q5-name {
+  font-size: 1.4rem;
+  margin-bottom: 1em;
+}
+
+.q5-features {
+  list-style: none;
+  margin-bottom: 1.5em;
+}
+
+.q5-features li {
+  padding: 0.4em 0;
+  border-bottom: 1px solid #334155;
+  font-size: 0.95rem;
+}
+
+.q5-price {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+  color: #38bdf8;
+}
+
+.q5-button {
+  display: inline-block;
+  background-color: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7em 1.5em;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.q5-button:hover {
+  background-color: #1d4ed8;
+}
+
+.q5-popular {
+  border: 3px solid #facc15;
+}
+
+
+/* =============================================================
+   QUESTION 6: CSS Only Photo Gallery
+   ============================================================= */
+
+.q6-title {
+  text-align: center;
+  padding: 1.5em 0 1em;
+  color: #f3f4f6;
+  background-color: #111827;
+}
+
+.q6-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2em;
+  background-color: #111827;
+  padding: 0 5% 3em;
+}
+
+.q6-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.q6-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.q6-item:hover img {
+  transform: scale(1.1);
+}
+
+.q6-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 0.6em 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.q6-item:hover .q6-caption {
+  opacity: 1;
+}
+
+
+/* =============================================================
+   QUESTION 7: Contact Page
+   ============================================================= */
+
+.q7-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 2em;
+  background-color: #ecfeff;
+}
+
+.q7-form {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 2.5em;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.q7-title {
+  text-align: center;
+  color: #0e7490;
+  margin-bottom: 1em;
+}
+
+.q7-form label {
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+  font-size: 0.9rem;
+  color: #164e63;
+  font-weight: 600;
+}
+
+.q7-form input,
+.q7-form textarea {
+  padding: 0.7em;
+  border: 1px solid #a5f3fc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #0e7490;
+  background-color: #f0fdff;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+
+.q7-form input:focus,
+.q7-form textarea:focus {
+  outline: none;
+  border-color: #0e7490;
+}
+
+.q7-submit {
+  margin-top: 1.5em;
+  padding: 0.8em;
+  background-color: #0e7490;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.q7-submit:hover {
+  background-color: #0c5a72;
+}
+
+
+/* =============================================================
+   QUESTION 8: Dashboard Layout
+   ============================================================= */
+
+.q8-header {
+  height: 60px;
+  background-color: #4338ca;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5em;
+
+    
+}
+
+.q8-wrapper {
+  display: flex;
+  min-height: 400px;
+}
+
+.q8-sidebar {
+  width: 220px;
+  background-color: #1e1b4b;
+  flex-shrink: 0;
+}
+
+.q8-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em 1em;
+}
+
+.q8-nav a {
+  color: #c7d2fe;
+  text-decoration: none;
+  padding: 0.8em 0.6em;
+  border-radius: 6px;
+  margin-bottom: 0.3em;
+}
+
+.q8-nav a:hover {
+  background-color: #312e81;
+  color: #fff;
+}
+
+.q8-main {
+  flex: 1;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  background-color: #f1f5f9;
+}
+
+.q8-box {
+  background-color: #ffffff;
+  padding: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.q8-box h2 {
+  margin-bottom: 0.5em;
+  color: #312e81;
+}
+
+/* sidebar stacks above content on small screens */
+@media (max-width: 700px) {
+  .q8-wrapper {
+    flex-direction: column;
+  }
+  .q8-sidebar {
+    width: 100%;
+  }
+  .q8-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =============================================================
+   QUESTION 9: Newspaper / Magazine Column Layout
+   ============================================================= */
+
+.q9-page {
+  background-color: #fafaf9;
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 2em;
+  font-family: 'Georgia', serif;
+}
+
+.q9-heading {
+  column-span: all;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1em;
+  color: #1c1917;
+  border-bottom: 3px double #57534e;
+  padding-bottom: 0.5em;
+}
+
+.q9-columns {
+  column-count: 3;
+  column-gap: 2em;
+  text-align: justify;
+  color: #292524;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.q9-columns p {
+  margin-bottom: 1em;
+}
+
+.q9-img {
+  float: left;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 1em 1em 0;
+  border-radius: 4px;
+}
+
+
+/* =============================================================
+   QUESTION 10: Complete Layout - Box Model & Positioning Mastery
+   ============================================================= */
+
+.q10-header {
+  position: sticky; /* sticky nav, required for this question */
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  color: #fff;
+  padding: 1em 5%;
+  z-index: 10;
+}
+
+.q10-nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  margin-left: 1.5em;
+}
+
+.q10-hero {
+  position: relative;
+  height: 300px;
+  background-image: url("https://via.placeholder.com/1400x400");
+  background-size: cover;
+  background-position: center;
+}
+
+.q10-hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.45); /* rgba() as required */
+  padding: 1em 2em;
+  border-radius: 8px;
+}
+
+
+.q10-about {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 3em 8%;
+  margin: 1em 0;
+  border: 1px solid #e2e8f0;
+  outline: 2px solid transparent;
+}
+
+.q10-about-text {
+  flex: 1;
+}
+
+.q10-about-img {
+  flex: 1;
+  max-width: 350px;
+  border-radius: 10px;
+}
+
+
+.q10-services {
+  display: flex;
+  gap: 1.5em;
+  padding: 3em 8%;
+  background: linear-gradient(120deg, #f1f5f9, #e2e8f0); 
+}
+
+.q10-service-box {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 1.5em;
+  margin: 0.5em;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.q10-contact {
+  padding: 3em 8%;
+  text-align: center;
+  position: relative;
+}
+
+.q10-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 1.5em auto 0;
+  gap: 1em;
+}
+
+.q10-form input,
+.q10-form textarea {
+  padding: 0.7em;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+}
+
+.q10-form button {
+  background-color: #0f172a;
+  color: #fff;
+  border: none;
+  padding: 0.7em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.q10-footer {
+  text-align: center;
+  padding: 1.2em 0;
+  background-color: #0f172a;
+  color: #cbd5e1;
+  position: relative; 
+}

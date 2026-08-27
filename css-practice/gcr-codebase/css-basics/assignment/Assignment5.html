@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 5</title>
+  <link rel="stylesheet" href="assignment5_all_questions.css">
+</head>
+<body>
+
+<!-- =========================================================
+     QUESTION 1: Personal Portfolio Homepage
+     ========================================================= -->
+<section class="question-block" id="question-1">
+  <p class="q-label">Question 1 - Personal Portfolio Homepage</p>
+
+  <header class="q1-header">
+    <h1 class="q1-name">Pradyumn Singh</h1>
+    <nav class="q1-nav">
+      <a href="#question-1">Home</a>
+      <a href="#question-1">About</a>
+      <a href="#question-1">Contact</a>
+    </nav>
+  </header>
+
+  <main class="q1-main">
+    <div class="q1-bio">
+      <img src="https://via.placeholder.com/150" alt="profile picture" class="q1-pic">
+      <p class="q1-text">
+        Hey, I'm Pradyumn - a Java developer who enjoys solving DSA problems
+        and building small web projects on the side. This section is just a
+        practice run for learning CSS positioning and units properly.
+      </p>
+    </div>
+  </main>
+
+  <footer class="q1-footer">
+    <p>&copy; 2026 Pradyumn Singh. All rights reserved.</p>
+  </footer>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 2: Multi-section Informational Page (About Jaipur)
+     ========================================================= -->
+<section class="question-block" id="question-2">
+  <p class="q-label">Question 2 - About Jaipur (Multi-section Page)</p>
+
+  <header class="q2-header">
+    <h1>About Jaipur - The Pink City</h1>
+  </header>
+
+  <nav class="q2-nav">
+    <a href="#q2-intro">Introduction</a>
+    <a href="#q2-food">Food</a>
+    <a href="#q2-places">Places to Visit</a>
+  </nav>
+
+  <main>
+    <section id="q2-intro" class="q2-section q2-gradient-linear">
+      <h2>Introduction</h2>
+      <p>
+        Jaipur, the capital of Rajasthan, is famously known as the Pink City
+        because of the reddish-pink hue of its old buildings. It blends
+        royal history with a fast-growing modern culture.
+      </p>
+    </section>
+
+    <section id="q2-food" class="q2-section q2-parallax-one">
+      <h2>Local Food</h2>
+      <p>
+        From Dal Baati Churma to Pyaaz Kachori, Jaipur's street food scene
+        is something every visitor should try at least once.
+      </p>
+    </section>
+
+    <section class="q2-section q2-gradient-radial">
+      <h2>City Life</h2>
+      <p>
+        The old walled city still hums with the energy of local bazaars,
+        while the newer parts of Jaipur host malls and IT offices.
+      </p>
+    </section>
+
+    <section id="q2-places" class="q2-section q2-parallax-two">
+      <h2>Places to Visit</h2>
+      <p>
+        Amber Fort, Hawa Mahal and City Palace are must-visit spots that
+        show off the architectural brilliance of the Rajput era.
+      </p>
+    </section>
+  </main>
+
+  <footer class="q2-footer">
+    <p>Made for Assignment 5 - CSS Practice</p>
+  </footer>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 3: Team Members Layout (3 column cards)
+     ========================================================= -->
+<section class="question-block" id="question-3">
+  <p class="q-label">Question 3 - Team Members Layout</p>
+
+  <h1 class="q3-title">Meet Our Team</h1>
+
+  <div class="q3-container">
+    <div class="q3-card">
+      <h2 class="q3-name">Riya Sharma</h2>
+      <p class="q3-role">Frontend Developer</p>
+      <p class="q3-desc">Loves building clean and responsive UIs with plain CSS.</p>
+    </div>
+
+    <!-- highlighted card - team lead, styled differently on purpose -->
+    <div class="q3-card q3-card-lead">
+      <h2 class="q3-name">Pradyumn Singh</h2>
+      <p class="q3-role">Team Lead</p>
+      <p class="q3-desc">Handles project planning and backend logic in Java.</p>
+    </div>
+
+    <div class="q3-card">
+      <h2 class="q3-name">Aman Verma</h2>
+      <p class="q3-role">UI/UX Designer</p>
+      <p class="q3-desc">Focuses on making layouts look neat and easy to use.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 4: Long Article Page
+     ========================================================= -->
+<section class="question-block" id="question-4">
+  <p class="q-label">Question 4 - Long Article Page</p>
+
+  <header class="q4-header">
+    <h1>Why Competitive Programming Still Matters</h1>
+    <p class="q4-sub">By Pradyumn Singh | Published August 27, 2026</p>
+  </header>
+
+  <article class="q4-body">
+    <p>
+      Competitive programming has long been treated as just a hobby for
+      people who enjoy solving tricky puzzles under time pressure. But the
+      habits it builds - <mark class="q4-highlight">breaking problems down</mark>
+      and thinking about edge cases - carry over directly into real
+      software engineering work.
+    </p>
+
+    <p>
+      Platforms like Codeforces and LeetCode give a structured way to track
+      progress over time. Watching your rating slowly climb after weeks of
+      practice is oddly satisfying, and it keeps a lot of people consistent
+      with their <mark class="q4-highlight">daily practice</mark> routine.
+    </p>
+
+    <p>
+      One argument against it is that contest problems rarely resemble real
+      world code. That is fair, but the underlying skill of reading a
+      problem statement carefully and reasoning about complexity is
+      transferable almost everywhere, including interviews.
+    </p>
+
+    <blockquote class="q4-quote">
+      "The best way to get better at solving problems is to solve a lot of
+      problems, and then go back and understand the ones you got wrong."
+    </blockquote>
+
+    <p>
+      For someone learning Java, competitive programming is also a great
+      way to get comfortable with the language itself - collections,
+      streams, and even simple I/O handling become second nature after
+      enough practice sessions.
+    </p>
+
+    <p>
+      Eventually the goal shifts from just solving problems for rating
+      points to actually enjoying the process of thinking clearly under
+      constraints, which is a skill worth keeping long after the
+      <mark class="q4-highlight">contest clock</mark> runs out.
+    </p>
+  </article>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 5: Pricing Table
+     ========================================================= -->
+<section class="question-block" id="question-5">
+  <p class="q-label">Question 5 - Pricing Table</p>
+
+  <h1 class="q5-title">Choose Your Plan</h1>
+
+  <div class="q5-container">
+    <div class="q5-plan">
+      <h2 class="q5-name">Basic</h2>
+      <ul class="q5-features">
+        <li>5 GB Storage</li>
+        <li>Email Support</li>
+        <li>1 Project</li>
+      </ul>
+      <p class="q5-price">₹499/mo</p>
+      <a href="#" class="q5-button">Get Started</a>
+    </div>
+
+    <!-- most popular plan, given a different border to stand out -->
+    <div class="q5-plan q5-popular">
+      <h2 class="q5-name">Standard</h2>
+      <ul class="q5-features">
+        <li>50 GB Storage</li>
+        <li>Priority Support</li>
+        <li>10 Projects</li>
+        <li>Basic Analytics</li>
+      </ul>
+      <p class="q5-price">₹999/mo</p>
+      <a href="#" class="q5-button">Get Started</a>
+    </div>
+
+    <div class="q5-plan">
+      <h2 class="q5-name">Premium</h2>
+      <ul class="q5-features">
+        <li>Unlimited Storage</li>
+        <li>24/7 Support</li>
+        <li>Unlimited Projects</li>
+        <li>Advanced Analytics</li>
+      </ul>
+      <p class="q5-price">₹1999/mo</p>
+      <a href="#" class="q5-button">Get Started</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 6: CSS Only Photo Gallery
+     ========================================================= -->
+<section class="question-block" id="question-6">
+  <p class="q-label">Question 6 - Photo Gallery</p>
+
+  <h1 class="q6-title">Photo Gallery</h1>
+
+  <div class="q6-gallery">
+    <div class="q6-item">
+      <img src="https://via.placeholder.com/400x300?text=Photo+1" alt="photo 1">
+      <div class="q6-caption">Sunset Trip</div>
+    </div>
+    <div class="q6-item">
+      <img src="https://via.placeholder.com/400x300?text=Photo+2" alt="photo 2">
+      <div class="q6-caption">Mountain View</div>
+    </div>
+    <div class="q6-item">
+      <img src="https://via.placeholder.com/400x300?text=Photo+3" alt="photo 3">
+      <div class="q6-caption">City Lights</div>
+    </div>
+    <div class="q6-item">
+      <img src="https://via.placeholder.com/400x300?text=Photo+4" alt="photo 4">
+      <div class="q6-caption">Beach Walk</div>
+    </div>
+    <div class="q6-item">
+      <img src="https://via.placeholder.com/400x300?text=Photo+5" alt="photo 5">
+      <div class="q6-caption">Forest Trail</div>
+    </div>
+    <div class="q6-item">
+      <img src="https://via.placeholder.com/400x300?text=Photo+6" alt="photo 6">
+      <div class="q6-caption">Old Fort</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 7: Contact Page
+     ========================================================= -->
+<section class="question-block" id="question-7">
+  <p class="q-label">Question 7 - Contact Page</p>
+
+  <div class="q7-wrapper">
+    <form class="q7-form">
+      <h1 class="q7-title">Get in Touch</h1>
+
+      <label for="q7-name">Name</label>
+      <input type="text" id="q7-name" name="name" placeholder="Your full name">
+
+      <label for="q7-email">Email</label>
+      <input type="email" id="q7-email" name="email" placeholder="you@example.com">
+
+      <label for="q7-subject">Subject</label>
+      <input type="text" id="q7-subject" name="subject" placeholder="What is this about?">
+
+      <label for="q7-message">Message</label>
+      <textarea id="q7-message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+
+      <button type="submit" class="q7-submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 8: Dashboard Layout
+     ========================================================= -->
+<section class="question-block" id="question-8">
+  <p class="q-label">Question 8 - Dashboard Layout</p>
+
+  <header class="q8-header">
+    <h1>My Dashboard</h1>
+  </header>
+
+  <div class="q8-wrapper">
+    <aside class="q8-sidebar">
+      <nav class="q8-nav">
+        <a href="#">Overview</a>
+        <a href="#">Reports</a>
+        <a href="#">Projects</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </nav>
+    </aside>
+
+    <main class="q8-main">
+      <div class="q8-box">
+        <h2>Summary</h2>
+        <p>Everything looks good today. No pending alerts.</p>
+      </div>
+      <div class="q8-box">
+        <h2>Recent Activity</h2>
+        <p>3 new tasks were added to your project board.</p>
+      </div>
+    </main>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 9: Newspaper / Magazine Column Layout
+     ========================================================= -->
+<section class="question-block" id="question-9">
+  <p class="q-label">Question 9 - Newspaper Column Layout</p>
+
+  <div class="q9-page">
+    <h1 class="q9-heading">The Daily Column</h1>
+
+    <div class="q9-columns">
+      <img src="https://via.placeholder.com/250x180" alt="news image" class="q9-img">
+
+      <p>
+        Reading habits have changed a lot over the last decade, but the
+        classic newspaper column layout still holds up as one of the most
+        readable ways to present long text. It naturally limits line length,
+        which keeps the eye from getting lost while scanning.
+      </p>
+      <p>
+        With plain CSS, we can recreate this look using the column-count
+        property. No JavaScript or grid tricks are needed - the browser
+        handles the text flow between columns automatically once we set a
+        number of columns and a gap.
+      </p>
+      <p>
+        The trick is making sure images and headings behave properly around
+        the columns. Floating an image lets text wrap around it naturally,
+        similar to how old print newspapers handled photos next to articles.
+      </p>
+      <p>
+        Overall this layout is a nice reminder that a lot of "old school"
+        print design ideas translate surprisingly well to the web when you
+        actually take the time to use the right CSS properties.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     QUESTION 10: Complete Layout - Box Model & Positioning Mastery
+     ========================================================= -->
+<section class="question-block" id="question-10">
+  <p class="q-label">Question 10 - Complete Layout (Box Model + Positioning)</p>
+
+  <header class="q10-header">
+    <h1 class="q10-logo">MyBrand</h1>
+    <nav class="q10-nav">
+      <a href="#q10-hero">Home</a>
+      <a href="#q10-about">About</a>
+      <a href="#q10-services">Services</a>
+      <a href="#q10-contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- hero uses relative positioning to allow the overlay text to be centered absolutely -->
+  <section id="q10-hero" class="q10-hero">
+    <div class="q10-hero-text">
+      <h2>Welcome to MyBrand</h2>
+      <p>Building simple, honest web experiences.</p>
+    </div>
+  </section>
+
+  <!-- about section - two columns using flexbox -->
+  <section id="q10-about" class="q10-about">
+    <div class="q10-about-text">
+      <h2>About Us</h2>
+      <p>
+        We are a small team that believes good design should be simple and
+        functional first, decorative second. This section uses the box
+        model with margin, padding, border and outline all combined.
+      </p>
+    </div>
+    <img src="https://via.placeholder.com/350x250" alt="about us" class="q10-about-img">
+  </section>
+
+  <!-- services section - three boxes in a row -->
+  <section id="q10-services" class="q10-services">
+    <div class="q10-service-box">
+      <h3>Design</h3>
+      <p>Clean layouts built with pure HTML and CSS.</p>
+    </div>
+    <div class="q10-service-box">
+      <h3>Development</h3>
+      <p>Reliable front-end code that just works.</p>
+    </div>
+    <div class="q10-service-box">
+      <h3>Support</h3>
+      <p>We stick around after launch to help out.</p>
+    </div>
+  </section>
+
+  <!-- contact section - simple form -->
+  <section id="q10-contact" class="q10-contact">
+    <h2>Contact Us</h2>
+    <form class="q10-form">
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer class="q10-footer">
+    <p>&copy; 2026 MyBrand. All rights reserved.</p>
+  </footer>
+</section>
+
+</body>
+</html>
