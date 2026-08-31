@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q1 - YouTube Video Embed</title>
+</head>
+<body>
+
+    <h1>My Favorite YouTube Video</h1>
+
+    <!-- Width and height are set using percentage values so the iframe
+         resizes along with the browser window instead of staying a fixed size -->
+    <iframe
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        width="80%"
+        height="60%"
+        title="YouTube video player">
+    </iframe>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q2 - Google Map Embed</title>
+</head>
+<body>
+
+    <h1>Location of My City - Mathura</h1>
+
+    <!-- The loading="lazy" attribute tells the browser to delay loading
+         this iframe until the user scrolls near it. This improves page
+         load speed since the map is not fetched immediately. -->
+    <iframe
+        title="Google Map showing Mathura"
+        src="https://www.google.com/maps?q=Mathura,Uttar+Pradesh&output=embed"
+        width="600"
+        height="450"
+        loading="lazy">
+    </iframe>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite Hobby</title>
+</head>
+<body>
+    <h2>My Favorite Hobby</h2>
+    <p>I enjoy playing chess and exploring new topics in cybersecurity in my free time.</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introduction</title>
+</head>
+<body>
+    <h2>Introduction</h2>
+    <p>Hi, I am Harsh Kumar, a student interested in web development and cybersecurity.</p>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q3 - Two Stacked Iframes</title>
+</head>
+<body>
+
+    <h1>About Me</h1>
+
+    <!-- First iframe displays the introduction page -->
+    <iframe src="q3-intro.html" width="500" height="200" title="Introduction"></iframe>
+
+    <br><br>
+
+    <!-- Second iframe displays the hobby page, same width for balance -->
+    <iframe src="q3-hobby.html" width="500" height="200" title="Favorite Hobby"></iframe>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Navigation</title>
+</head>
+<body>
+    <a href="#">Home</a> |
+    <a href="#">About</a> |
+    <a href="#">Contact</a>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+</head>
+<body>
+    <p>Welcome to My Website</p>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Q4 - Frameset Layout</title>
+</head>
+<!-- Frameset splits the page into a top navigation frame and a bottom content frame -->
+<frameset rows="20%,80%">
+    <frame src="q4-nav.html" title="Navigation">
+    <frame src="q4-welcome.html" title="Welcome Message">
+</frameset>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vaibhav Jain">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5 - UTF-8 Encoding Test</title>
+</head>
+<body>
+
+    <h1>UTF-8 Encoding Test</h1>
+
+    <!-- This paragraph mixes English, Hindi, and Japanese text
+         to verify that the UTF-8 charset renders all scripts correctly -->
+    <p>
+        English: Hello, welcome to my website.<br>
+        Hindi: नमस्ते, मेरी वेबसाइट पर आपका स्वागत है।<br>
+        Japanese: こんにちは、私のウェブサイトへようこそ。
+    </p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q6 - User Registration Form</title>
+</head>
+<body>
+
+    <h1>User Registration</h1>
+
+    <form action="#" method="post">
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="confirm_password">Confirm Password:</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q7 - Login Form</title>
+</head>
+<body>
+
+    <h1>Login</h1>
+
+    <form action="#" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <!-- A CSRF (Cross-Site Request Forgery) token is a hidden, unique value
+             generated by the server for each session/form. When the form is
+             submitted, the server checks that this token matches, which proves
+             the request actually came from the site's own form and not from
+             a malicious external site. -->
+        <input type="hidden" name="csrf_token" value="a1b2c3d4e5dummyToken">
+
+        <input type="submit" value="Login">
+    </form>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q8 - Feedback Form</title>
+</head>
+<body>
+
+    <h1>Feedback Form</h1>
+
+    <form method="post" action="#">
+        <label for="feedback">Your Feedback:</label><br>
+        <textarea id="feedback" name="feedback" rows="5" cols="40"></textarea><br><br>
+
+        <p>Rating:</p>
+        <input type="radio" id="good" name="rating" value="Good">
+        <label for="good">Good</label><br>
+
+        <input type="radio" id="average" name="rating" value="Average">
+        <label for="average">Average</label><br>
+
+        <input type="radio" id="poor" name="rating" value="Poor">
+        <label for="poor">Poor</label><br><br>
+
+        <input type="submit" value="Submit Feedback">
+    </form>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q9 - File Upload Form</title>
+</head>
+<body>
+
+    <h1>Upload Your Photo</h1>
+
+    <form method="post" action="#" enctype="multipart/form-data">
+        <label for="photo">Choose a file:</label><br>
+        <input type="file" id="photo" name="photo" accept=".jpg, .png"><br><br>
+
+        <input type="submit" value="Upload">
+    </form>
+
+    <p>Only .jpg or .png image files are allowed to be uploaded.</p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q10 - Contact Form</title>
+</head>
+<body>
+
+    <h1>Contact Us</h1>
+
+    <form method="post" action="#">
+        <label for="fullname">Full Name:</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <label for="subject">Subject:</label><br>
+        <input type="text" id="subject" name="subject" placeholder="Enter subject" required><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" cols="40" placeholder="Enter your message" required></textarea><br><br>
+
+        <input type="submit" value="Send">
+    </form>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q11 - Student Information Form</title>
+</head>
+<body>
+
+    <h1>Student Information</h1>
+
+    <form method="post" action="#">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="roll">Roll Number:</label><br>
+        <input type="text" id="roll" name="roll" required><br><br>
+
+        <label for="course">Course:</label><br>
+        <select id="course" name="course" required>
+            <option value="" disabled selected>Select Course</option>
+            <option value="btech">B.Tech</option>
+            <option value="bca">BCA</option>
+            <option value="mca">MCA</option>
+            <option value="mba">MBA</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q12 - HTML Entities</title>
+</head>
+<body>
+
+    <h1>HTML Entities Demonstration</h1>
+
+    <!-- Using entities to display reserved characters and symbols -->
+    <p>
+        Less than: &lt; &nbsp;&nbsp;
+        Greater than: &gt; &nbsp;&nbsp;
+        Ampersand: &amp; &nbsp;&nbsp;
+        Double quote: &quot; &nbsp;&nbsp;
+        Single quote: &apos;
+    </p>
+
+    <p>
+        Copyright: &copy; &nbsp;&nbsp;
+        Trademark: &trade; &nbsp;&nbsp;
+        Registered: &reg;
+    </p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q13 - Multilingual Page</title>
+</head>
+<body>
+
+    <h1>Greetings in Three Languages</h1>
+
+    <p>English: Welcome to my website.</p>
+    <p>Hindi: मेरी वेबसाइट पर आपका स्वागत है।</p>
+    <p>French: Bienvenue sur mon site web.</p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q14 - External Website Embed</title>
+</head>
+<body>
+
+    <h1>Embedding an External Website</h1>
+
+    <iframe
+        src="https://www.wikipedia.org"
+        title="Wikipedia"
+        width="80%"
+        height="400">
+    </iframe>
+
+    <p>Some websites may not allow embedding for security reasons.</p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q15 - Payment Form</title>
+</head>
+<body>
+
+    <h1>Payment Details</h1>
+
+    <form method="post" action="#">
+        <label for="cardholder">Cardholder Name:</label><br>
+        <input type="text" id="cardholder" name="cardholder" required><br><br>
+
+        <label for="cardnumber">Card Number:</label><br>
+        <input type="text" id="cardnumber" name="cardnumber" required><br><br>
+
+        <label for="expiry">Expiry Date:</label><br>
+        <input type="text" id="expiry" name="expiry" placeholder="MM/YY" required><br><br>
+
+        <label for="cvv">CVV:</label><br>
+        <input type="password" id="cvv" name="cvv" required><br><br>
+
+        <input type="submit" value="Pay Now">
+    </form>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q16 - URI Encoding</title>
+</head>
+<body>
+
+    <h1>URI Encoding Example</h1>
+
+    <p>Original URL (contains spaces and special characters):</p>
+    <p>https://example.com/search?query=HTML & CSS</p>
+
+    <p>Correctly encoded URL (spaces replaced with %20):</p>
+    <a href="https://example.com/search?query=HTML%20%26%20CSS">
+        https://example.com/search?query=HTML%20%26%20CSS
+    </a>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q17 - Form Page</title>
+</head>
+<body>
+
+    <h1>Submit the Form</h1>
+
+    <!-- The form's target attribute points to the named iframe below,
+         so submitting the form loads result.html inside the iframe -->
+    <form action="q17-result.html" method="get" target="resultFrame">
+        <input type="text" name="response" placeholder="Type something"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <br>
+
+    <iframe name="resultFrame" title="Result Frame" width="400" height="150"></iframe>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q17 - Result Page</title>
+</head>
+<body>
+
+    <p>Form successfully submitted.</p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q18 - Quotations</title>
+</head>
+<body>
+
+    <h1>Quotations Example</h1>
+
+    <!-- Long quotation using blockquote -->
+    <blockquote>
+        The only way to do great work is to love what you do, and success will
+        follow &amp; naturally.
+    </blockquote>
+
+    <!-- Short quotation using q inside a paragraph -->
+    <p>
+        As the saying goes, <q>knowledge is power</q>, and it applies to every
+        field of study.
+    </p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q19 - Form Security Attributes</title>
+</head>
+<body>
+
+    <h1>Secure Form Example</h1>
+
+    <form method="post" action="#" autocomplete="off">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>
+        Turning off autocomplete prevents the browser from storing and
+        auto-filling sensitive form data such as passwords. This reduces the
+        risk of that data being exposed if the device is shared or accessed
+        by someone else.
+    </p>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- title: sets the text shown in the browser tab -->
+    <title>Q20 - Head Elements</title>
+
+    <!-- meta charset: defines the character encoding of the document -->
+    <meta charset="UTF-8">
+
+    <!-- meta description: gives search engines a summary of the page -->
+    <meta name="description" content="A demo page showing important head elements">
+
+    <!-- meta author: identifies the creator of the page -->
+    <meta name="author" content="Vaibhav Jain">
+
+    <!-- base: sets the default base URL for all relative links on the page -->
+    <base href="https://example.com/">
+
+    <!-- link: connects an external resource, here a favicon icon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- style: reserved for internal CSS (left empty per instructions) -->
+    <style></style>
+
+    <!-- script: reserved for internal JavaScript (left empty per instructions) -->
+    <script></script>
+
+</head>
+<body>
+
+    <h1>Head Elements Demonstration</h1>
+    <p>This page demonstrates the important tags used inside the &lt;head&gt; section.</p>
+
+</body>
+</html>
