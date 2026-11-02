@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport meta makes Bootstrap's responsive grid work on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 10 - Bootstrap 5 Solutions (Q1 to Q10)</title>
+
+  <!-- Bootstrap 5 CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Font used in Q5 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS for all 10 questions (separated by comments) -->
+  <link href="Assign_10.css" rel="stylesheet">
+</head>
+<body class="bg-body-tertiary">
+
+  <!-- Page-level jump menu (sticky-top keeps it visible while scrolling) -->
+  <nav class="navbar navbar-dark bg-dark sticky-top py-1" aria-label="Question navigation">
+    <div class="container d-flex flex-wrap justify-content-center gap-2">
+      <a class="btn btn-sm btn-outline-light" href="#q1">Q1</a>
+      <a class="btn btn-sm btn-outline-light" href="#q2">Q2</a>
+      <a class="btn btn-sm btn-outline-light" href="#q3">Q3</a>
+      <a class="btn btn-sm btn-outline-light" href="#q4">Q4</a>
+      <a class="btn btn-sm btn-outline-light" href="#q5">Q5</a>
+      <a class="btn btn-sm btn-outline-light" href="#q6">Q6</a>
+      <a class="btn btn-sm btn-outline-light" href="#q7">Q7</a>
+      <a class="btn btn-sm btn-outline-light" href="#q8">Q8</a>
+      <a class="btn btn-sm btn-outline-light" href="#q9">Q9</a>
+      <a class="btn btn-sm btn-outline-light" href="#q10">Q10</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- =================================================================
+         Q1. Company Landing Page (Intro to Bootstrap)
+         ================================================================= -->
+    <section id="q1" class="question-section">
+      <p class="q-label">Q1. Company Landing Page</p>
+
+      <!-- Full-width header: navbar-expand-lg collapses the menu below 992px -->
+      <header class="bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container">
+            <a class="navbar-brand fw-bold" href="#q1">LaunchPad</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#q1Menu" aria-controls="q1Menu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="q1Menu">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#q1">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#q1">Features</a></li>
+                <li class="nav-item"><a class="nav-link" href="#q1">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#q1">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Hero: py-5 = vertical padding, text-center = centered text, display-4 = big heading -->
+      <div class="bg-light py-5 text-center">
+        <div class="container">
+          <h1 class="display-4 fw-bold">Build faster. Launch sooner.</h1>
+          <p class="lead text-secondary">LaunchPad gives startups the tools to go from idea to product in weeks.</p>
+          <a href="#q1" class="btn btn-primary btn-lg">Get Started</a>
+        </div>
+      </div>
+
+      <!-- container > row > col: 1 column on phones, 3 columns from md up -->
+      <div class="container py-5">
+        <div class="row g-4 text-center">
+          <div class="col-md-4"><h3 class="h5">Easy Setup</h3><p>Start in minutes with ready-made templates.</p></div>
+          <div class="col-md-4"><h3 class="h5">Scales With You</h3><p>From first user to first million without a rewrite.</p></div>
+          <div class="col-md-4"><h3 class="h5">Friendly Support</h3><p>A real team answers within one business day.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q2. Personal Portfolio Basics (Bootstrap Utilities)
+         ================================================================= -->
+    <section id="q2" class="question-section">
+      <p class="q-label">Q2. Personal Portfolio</p>
+
+      <!-- bg-light text-dark = background / text color, p-5 = padding, text-center = alignment -->
+      <header class="bg-light text-dark p-5 text-center">
+        <div class="container">
+          <!-- img-fluid = responsive image, rounded-circle = round image -->
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%23a5f3fc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" class="img-fluid rounded-circle mb-3 profile-img" alt="Profile photo of Aman Verma">
+          <h1 class="fw-bold">Aman Verma</h1>
+          <p class="lead mb-3">Front-end developer who turns ideas into clean, responsive websites.</p>
+          <a href="#q2" class="btn btn-primary me-2">Hire Me</a>
+          <a href="#q2" class="btn btn-outline-secondary">Download CV</a>
+        </div>
+      </header>
+
+      <!-- mt-4 / mb-3 = margin top / bottom -->
+      <div class="container text-center mt-4">
+        <h2 class="h4 mb-3">Contact Me</h2>
+        <form class="mx-auto contact-form" action="#" method="post">
+          <!-- form-control styles inputs and textareas -->
+          <input type="text" class="form-control mb-3" placeholder="Your name" aria-label="Your name">
+          <input type="email" class="form-control mb-3" placeholder="Your email" aria-label="Your email">
+          <textarea class="form-control mb-3" rows="3" placeholder="Your message" aria-label="Your message"></textarea>
+          <button type="submit" class="btn btn-dark">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q3. Product Catalog (Bootstrap Grid System)
+         ================================================================= -->
+    <section id="q3" class="question-section">
+      <p class="q-label">Q3. Product Catalog</p>
+      <div class="container py-4">
+        <h2 class="text-center mb-4">Featured Products</h2>
+
+        <!-- col-12 = 1 column on phones, col-sm-6 = 2 columns on tablets, col-lg-3 = 4 columns on desktop
+             (change col-lg-3 to col-md-3 if your teacher wants 4 columns from 768px) -->
+        <div class="row g-4">
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm product-card">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e76f51'/%3E%3Cstop offset='1' stop-color='%23f4a261'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" class="card-img-top" alt="Backpack">
+              <div class="card-body text-center">
+                <h3 class="h5 card-title">Travel Backpack</h3>
+                <p class="fw-bold text-primary">&#8377;1,499</p>
+                <a href="#q3" class="btn btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm product-card">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232a9d8f'/%3E%3Cstop offset='1' stop-color='%238ecae6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" class="card-img-top" alt="Headphones">
+              <div class="card-body text-center">
+                <h3 class="h5 card-title">Wireless Headphones</h3>
+                <p class="fw-bold text-primary">&#8377;2,999</p>
+                <a href="#q3" class="btn btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm product-card">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23f9a8d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" class="card-img-top" alt="Smart watch">
+              <div class="card-body text-center">
+                <h3 class="h5 card-title">Smart Watch</h3>
+                <p class="fw-bold text-primary">&#8377;3,499</p>
+                <a href="#q3" class="btn btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow-sm product-card">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%233f7d4e'/%3E%3Cstop offset='1' stop-color='%23d9ed92'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" class="card-img-top" alt="Water bottle">
+              <div class="card-body text-center">
+                <h3 class="h5 card-title">Steel Water Bottle</h3>
+                <p class="fw-bold text-primary">&#8377;499</p>
+                <a href="#q3" class="btn btn-primary">Add to Cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q4. Restaurant Menu Page (Bootstrap CSS Components)
+         ================================================================= -->
+    <section id="q4" class="question-section">
+      <p class="q-label">Q4. Restaurant Menu</p>
+      <div class="container py-4">
+        <h2 class="text-center">Today's Menu</h2>
+        <p class="lead text-center mb-4">Fresh ingredients, cooked daily.</p>
+
+        <div class="row g-4">
+          <!-- table-responsive stops the table breaking small screens; table-striped / table-hover add styling -->
+          <div class="col-lg-7">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark">
+                  <tr><th scope="col">Item</th><th scope="col">Category</th><th scope="col" class="text-end">Price</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Tomato Soup</td><td>Starter</td><td class="text-end">&#8377;120</td></tr>
+                  <tr><td>Paneer Tikka</td><td>Starter</td><td class="text-end">&#8377;220</td></tr>
+                  <tr><td>Butter Chicken</td><td>Main Course</td><td class="text-end">&#8377;350</td></tr>
+                  <tr><td>Veg Biryani</td><td>Main Course</td><td class="text-end">&#8377;260</td></tr>
+                  <tr><td>Gulab Jamun</td><td>Dessert</td><td class="text-end">&#8377;90</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="col-lg-5">
+            <h3 class="h5">Chef's Specials</h3>
+            <ul class="list-group mb-4">
+              <li class="list-group-item d-flex justify-content-between"><span>Smoked Dal Makhani</span><span>&#8377;240</span></li>
+              <li class="list-group-item d-flex justify-content-between"><span>Garlic Butter Prawns</span><span>&#8377;420</span></li>
+              <li class="list-group-item d-flex justify-content-between"><span>Mango Kulfi</span><span>&#8377;110</span></li>
+            </ul>
+
+            <figure class="text-center">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e0638a'/%3E%3Cstop offset='1' stop-color='%23ffd6a5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" class="img-fluid rounded" alt="Plated dish of the day">
+              <figcaption class="figure-caption mt-2">Today's special: Smoked Dal Makhani with naan.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q5. Custom Themed Blog Homepage (Bootstrap Themes)
+         ================================================================= -->
+    <section id="q5" class="question-section q5-theme">
+      <p class="q-label">Q5. Themed Blog Homepage</p>
+
+      <!-- Theme variables (--bs-primary, --bs-font-sans-serif) are overridden in Assign_10.css under .q5-theme -->
+      <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+          <h1>The Teal Notebook</h1>
+          <p class="lead mb-0">Notes on design, code and everyday creativity.</p>
+        </div>
+      </header>
+
+      <div class="container py-5">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <article class="card h-100">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%230f766e'/%3E%3Cstop offset='1' stop-color='%2399f6e4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" class="card-img-top" alt="Blog post image">
+              <div class="card-body">
+                <h2 class="h4 card-title">Why Small Habits Win</h2>
+                <p class="card-text">Ten minutes of practice every day beats one long session each week. Here is how to build a habit that lasts.</p>
+                <a href="#q5" class="btn btn-primary">Read More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="card h-100">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23115e59'/%3E%3Cstop offset='1' stop-color='%235eead4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" class="card-img-top" alt="Blog post image">
+              <div class="card-body">
+                <h2 class="h4 card-title">Color Choices That Work</h2>
+                <p class="card-text">A good palette needs just one main color and two neutrals. We look at simple rules for picking them.</p>
+                <a href="#q5" class="btn btn-primary">Read More</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <footer class="bg-dark text-white-50 text-center py-3">
+        <small>&copy; 2026 The Teal Notebook. Written with care.</small>
+      </footer>
+    </section>
+
+    <!-- =================================================================
+         Q6. Notifications Dashboard (Alerts & Wells)
+         ================================================================= -->
+    <section id="q6" class="question-section">
+      <p class="q-label">Q6. Notifications Dashboard</p>
+      <div class="container py-4">
+        <div class="card shadow-sm">
+          <div class="card-header fw-bold">Notifications</div>
+          <div class="card-body">
+
+            <!-- alert-success / alert-info / alert-danger = contextual colors -->
+            <div class="alert alert-success" role="alert"><strong>New message:</strong> Priya sent you a file.</div>
+            <div class="alert alert-info" role="alert"><strong>Tip:</strong> Press Ctrl + K to search from anywhere.</div>
+            <div class="alert alert-danger" role="alert"><strong>Warning:</strong> Your storage is 95% full.</div>
+
+            <!-- alert-dismissible + btn-close lets the user close the alert (needs Bootstrap JS) -->
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <strong>Reminder:</strong> Your subscription renews in 3 days.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+            <!-- "Well": a bordered, padded, light section -->
+            <div class="bg-light border rounded p-3">
+              <h2 class="h6 mb-1">Summary</h2>
+              <p class="mb-0">3 unread notifications, 1 dismissible reminder, 1 critical warning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q7. Task Tracker with Badges
+         ================================================================= -->
+    <section id="q7" class="question-section">
+      <p class="q-label">Q7. Task Tracker</p>
+      <div class="container py-4">
+        <div class="card shadow-sm mx-auto task-card">
+          <header class="card-header d-flex justify-content-between align-items-center">
+            <h2 class="h5 mb-0">My Tasks</h2>
+            <!-- badge counter: total pending tasks -->
+            <span class="badge text-bg-primary rounded-pill">Pending: 4</span>
+          </header>
+
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center">Submit project report <span class="badge text-bg-danger">High</span></li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">Fix navbar bug <span class="badge text-bg-danger">High</span></li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">Update portfolio <span class="badge text-bg-warning">Medium</span></li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">Organize bookmarks <span class="badge text-bg-success">Low</span></li>
+          </ul>
+
+          <footer class="card-footer text-end">
+            <!-- button with an embedded badge -->
+            <button type="button" class="btn btn-success">Completed <span class="badge text-bg-light">6</span></button>
+          </footer>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q8. Pricing Plans (Panels & Cards)
+         ================================================================= -->
+    <section id="q8" class="question-section">
+      <p class="q-label">Q8. Pricing Plans</p>
+      <div class="container py-4">
+        <h2 class="text-center mb-4">Choose Your Plan</h2>
+
+        <!-- col-md-4 = 3 cards side by side from 768px, stacked on phones -->
+        <div class="row g-4 align-items-stretch">
+
+          <div class="col-md-4">
+            <div class="card h-100 text-center plan-card">
+              <div class="card-body">
+                <h3 class="card-title">Basic</h3>
+                <p class="display-6 fw-bold">&#8377;0<small class="fs-6 text-secondary">/month</small></p>
+                <ul class="list-unstyled mb-4">
+                  <li>1 project</li><li>Community support</li><li>1 GB storage</li>
+                </ul>
+                <a href="#q8" class="btn btn-outline-primary">Start Free</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Highlighted plan: bg-primary + text-white -->
+          <div class="col-md-4">
+            <div class="card h-100 text-center bg-primary text-white plan-card">
+              <div class="card-body">
+                <h3 class="card-title">Pro</h3>
+                <p class="display-6 fw-bold">&#8377;799<small class="fs-6">/month</small></p>
+                <ul class="list-unstyled mb-4">
+                  <li>Unlimited projects</li><li>Priority support</li><li>50 GB storage</li>
+                </ul>
+                <a href="#q8" class="btn btn-light">Choose Pro</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 text-center plan-card">
+              <div class="card-body">
+                <h3 class="card-title">Enterprise</h3>
+                <p class="display-6 fw-bold">&#8377;2,499<small class="fs-6 text-secondary">/month</small></p>
+                <ul class="list-unstyled mb-4">
+                  <li>Custom limits</li><li>24/7 phone support</li><li>Dedicated manager</li>
+                </ul>
+                <a href="#q8" class="btn btn-outline-primary">Contact Sales</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q9. Blog Pagination & Pager
+         ================================================================= -->
+    <section id="q9" class="question-section">
+      <p class="q-label">Q9. Pagination &amp; Pager</p>
+      <div class="container py-4">
+        <h2 class="h4 text-center mb-4">Latest Blog Posts</h2>
+
+        <!-- justify-content-center centers the pagination -->
+        <nav aria-label="Blog pages">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#q9" tabindex="-1">Previous</a></li>
+            <li class="page-item active" aria-current="page"><a class="page-link" href="#q9">1</a></li>
+            <li class="page-item"><a class="page-link" href="#q9">2</a></li>
+            <li class="page-item"><a class="page-link" href="#q9">Next</a></li>
+          </ul>
+        </nav>
+
+        <!-- Simple pager: two outline buttons pushed to the left and right -->
+        <div class="d-flex justify-content-between mt-3">
+          <a href="#q9" class="btn btn-outline-secondary">&larr; Older Posts</a>
+          <a href="#q9" class="btn btn-outline-secondary">Newer Posts &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q10. Travel Agency Showcase (Carousel & Progress Bar)
+         ================================================================= -->
+    <section id="q10" class="question-section">
+      <p class="q-label">Q10. Travel Agency Showcase</p>
+      <header class="bg-info-subtle text-center py-3">
+        <h2 class="h3 mb-0">WanderTrips - Discover Your Next Journey</h2>
+      </header>
+
+      <div class="container py-4">
+        <!-- data-bs-ride="carousel" starts auto-sliding; data-bs-interval sets time (ms) for each slide -->
+        <div id="travelCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active" data-bs-interval="3000">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f4a261'/%3E%3Cstop offset='1' stop-color='%23e76f51'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" class="d-block w-100 carousel-img" alt="Sunset over mountains">
+              <div class="carousel-caption caption-bg"><h3>Himalayan Sunrise</h3><p>Trek through Uttarakhand's peaks.</p></div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232a9d8f'/%3E%3Cstop offset='1' stop-color='%238ecae6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" class="d-block w-100 carousel-img" alt="Calm ocean bay">
+              <div class="carousel-caption caption-bg"><h3>Goa Beaches</h3><p>Sun, sand and calm blue water.</p></div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23f9a8d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" class="d-block w-100 carousel-img" alt="Desert dunes at dusk">
+              <div class="carousel-caption caption-bg"><h3>Rajasthan Deserts</h3><p>Camel rides and starry nights.</p></div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#travelCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#travelCarousel" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
+        </div>
+
+        <!-- Progress bar: striped + animated, width set to 70% -->
+        <div class="mt-4">
+          <p class="mb-1 fw-semibold">Booking completion</p>
+          <div class="progress" role="progressbar" aria-label="Booking completion" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%">70%</div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row g-3">
+            <div class="col-md-6"><h3 class="h6">WanderTrips</h3><p class="mb-0 small">Making travel simple since 2015.</p></div>
+            <div class="col-md-6">
+              <address class="mb-0 small">
+                Email: hello@wandertrips.example<br>
+                Phone: +91 90000 00000<br>
+                Address: 12 Mall Road, Kashipur, Uttarakhand
+              </address>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- Bootstrap JS bundle: needed for navbar toggler (Q1), dismissible alert (Q6) and carousel (Q10) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,357 @@
+/* =====================================================================
+   ASSIGNMENT 9 - Responsive CSS Solutions (Q1 to Q10)
+   Every question has its own prefix (q1-, q2-, ...) so rules never clash.
+   ===================================================================== */
+
+
+/* =====================================================================
+   COMMON PAGE STYLES (shared by all questions)
+   ===================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #1f2933;
+  background: #eef1f6;
+}
+
+img { max-width: 100%; }
+
+.page-header { padding: 20px; text-align: center; color: #ffffff; background: #243b6b; }
+.page-header h1 { margin: 0 0 10px; }
+.page-header nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.page-header a { padding: 4px 10px; color: #ffffff; text-decoration: none; border: 1px solid #ffffff; border-radius: 4px; }
+.page-header a:hover { background: #ffffff; color: #243b6b; }
+
+.page-main { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+.question { margin-bottom: 30px; padding: 20px; background: #ffffff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); }
+.question h2 { margin-top: 0; padding-bottom: 8px; border-bottom: 2px solid #243b6b; }
+
+.page-footer { padding: 15px; text-align: center; color: #ffffff; background: #243b6b; }
+
+
+/* =====================================================================
+   Q1. Responsive Image Filter Gallery (Grid + filters)
+   ===================================================================== */
+.q1-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.q1-item { margin: 0; }
+
+.q1-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: filter 0.5s ease;     /* smooth removal of the filter */
+}
+
+.q1-item figcaption { margin-top: 6px; text-align: center; font-size: 0.9rem; font-weight: bold; }
+
+/* A different filter on each image */
+.q1-blur       { filter: blur(3px); }
+.q1-grayscale  { filter: grayscale(100%); }
+.q1-sepia      { filter: sepia(100%); }
+.q1-brightness { filter: brightness(1.6); }
+.q1-contrast   { filter: contrast(2); }
+.q1-hue        { filter: hue-rotate(120deg); }
+
+/* On hover the filter is removed */
+.q1-item img:hover { filter: none; }
+
+/* Below 600px: one column */
+@media (max-width: 600px) {
+  .q1-gallery { grid-template-columns: 1fr; }
+}
+
+
+/* =====================================================================
+   Q2. Responsive Web Design Layout (Flexbox)
+   ===================================================================== */
+.q2-site { display: flex; flex-direction: column; min-height: 380px; border: 1px solid #cbd2d9; border-radius: 8px; overflow: hidden; }
+
+/* Logo on the left, links on the right */
+.q2-header { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; color: #ffffff; background: #0f766e; }
+.q2-logo { font-size: 1.3rem; font-weight: bold; }
+.q2-nav { display: flex; gap: 16px; }
+.q2-nav a { color: #ffffff; text-decoration: none; }
+.q2-nav a:hover { text-decoration: underline; }
+
+/* Three feature boxes in a row */
+.q2-main { flex: 1; display: flex; gap: 20px; padding: 20px; }
+.q2-box {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+  background: #ccfbf1;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.q2-box:hover { transform: scale(1.05); }
+
+/* Footer centered at the bottom */
+.q2-footer { padding: 12px; text-align: center; color: #ffffff; background: #134e4a; }
+
+/* Below 750px the boxes stack vertically */
+@media (max-width: 750px) {
+  .q2-main { flex-direction: column; }
+}
+
+
+/* =====================================================================
+   Q3. Responsive Cards with Media Queries (Flexbox)
+   ===================================================================== */
+.q3-row { display: flex; flex-wrap: wrap; gap: 20px; }
+
+/* Desktop: 4 columns -> (100% - 3 gaps) / 4 */
+.q3-card {
+  flex: 0 0 calc((100% - 60px) / 4);
+  padding: 20px;
+  background: #e0e7ff;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.q3-card:hover { background: #fcd34d; }
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+  .q3-card { flex: 0 0 calc((100% - 20px) / 2); }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 600px) {
+  .q3-card { flex: 0 0 100%; }
+}
+
+
+/* =====================================================================
+   Q4. Responsive Typography (clamp)
+   ===================================================================== */
+.q4-demo { max-width: 800px; margin: 0 auto; padding: 30px 20px; text-align: center; background: #fef3c7; border-radius: 8px; }
+
+.q4-demo h1 { margin: 0 0 20px; font-size: clamp(1.5rem, 4vw, 3rem); }
+.q4-demo p  { margin: 0 auto; font-size: clamp(1rem, 2vw, 1.5rem); line-height: 1.6; }
+
+/* Below 700px: better readability */
+@media (max-width: 700px) {
+  .q4-demo { padding: 20px 12px; }
+  .q4-demo h1 { margin-bottom: 12px; line-height: 1.25; }
+  .q4-demo p { line-height: 1.8; }
+}
+
+
+/* =====================================================================
+   Q5. Filter Cards with Animation (Flexbox)
+   ===================================================================== */
+.q5-row { display: flex; gap: 20px; }
+
+.q5-card {
+  flex: 1;
+  padding: 16px;
+  text-align: center;
+  background: #f1f5f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: q5-fade 1s ease-in both;     /* fade-in on page load */
+}
+
+.q5-card img { width: 100%; height: auto; border-radius: 8px; transition: filter 0.4s ease; }
+.q5-gray  { filter: grayscale(100%); }
+.q5-sepia { filter: sepia(100%); }
+
+.q5-card h3 { margin: 10px 0 0; }
+.q5-card p  { margin: 4px 0 0; }
+
+/* Hover: remove filter and lift the card */
+.q5-card:hover { transform: translateY(-10px); box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25); }
+.q5-card:hover img { filter: none; }
+
+@keyframes q5-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Below 800px: stack vertically */
+@media (max-width: 800px) {
+  .q5-row { flex-direction: column; }
+}
+
+
+/* =====================================================================
+   Q6. Responsive CSS Cheat Sheet (Grid)
+   ===================================================================== */
+.q6-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+.q6-box {
+  padding: 16px;
+  background: #f0fdf4;
+  border: 1px solid #86efac;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.q6-box:hover { background: #bbf7d0; transform: translateY(-4px); }
+
+.q6-box h3 { margin: 0 0 8px; color: #166534; }
+.q6-box p  { margin: 0; }
+.q6-box code { background: #ffffff; padding: 2px 4px; border-radius: 3px; word-break: break-word; }
+
+/* Medium screens: 2 columns */
+@media (max-width: 1000px) {
+  .q6-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Small screens: stacked rows - heading is the key, text is the value */
+@media (max-width: 700px) {
+  .q6-grid { grid-template-columns: 1fr; gap: 10px; }
+  .q6-box { display: grid; grid-template-columns: 110px 1fr; gap: 12px; align-items: start; }
+  .q6-box h3 { margin: 0; }
+}
+
+
+/* =====================================================================
+   Q7. Combined Responsive Web Demo
+   ===================================================================== */
+.q7-page { border: 1px solid #cbd2d9; border-radius: 8px; overflow: hidden; animation: q7-fade 1s ease-in both; }
+
+/* Header + navigation with Flexbox */
+.q7-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; padding: 14px 20px; color: #ffffff; background: #7c2d12; }
+.q7-logo { font-weight: bold; font-size: 1.2rem; }
+.q7-nav { display: flex; gap: 14px; }
+.q7-nav a { color: #ffffff; text-decoration: none; transition: opacity 0.3s ease; }
+.q7-nav a:hover { opacity: 0.7; }
+
+/* Main content with Grid: three sections */
+.q7-main { display: grid; grid-template-columns: 1.4fr 1.4fr 1fr; gap: 16px; padding: 20px; }
+
+.q7-panel { padding: 14px; background: #fff7ed; border: 1px solid #fdba74; border-radius: 8px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.q7-panel:hover { transform: translateY(-4px); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); }
+.q7-panel h3 { margin-top: 0; }
+.q7-panel ul { margin: 0; padding-left: 18px; }
+
+.q7-thumbs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.q7-thumbs img { display: block; width: 100%; height: auto; border-radius: 6px; }
+
+.q7-footer { padding: 12px; text-align: center; color: #ffffff; background: #431407; }
+.q7-footer address { font-style: normal; }
+
+@keyframes q7-fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Below 700px all sections stack */
+@media (max-width: 700px) {
+  .q7-main { grid-template-columns: 1fr; }
+}
+
+
+/* =====================================================================
+   Q8. Filter Comparison Layout
+   ===================================================================== */
+.q8-compare { display: flex; gap: 20px; }
+
+.q8-figure { flex: 1; margin: 0; text-align: center; }
+.q8-figure img { display: block; width: 100%; height: auto; border-radius: 8px; }
+.q8-figure figcaption { margin-top: 8px; font-weight: bold; }
+
+/* Right image has a filter that fades away on hover */
+.q8-filtered { filter: brightness(1.4) contrast(1.6); transition: filter 0.6s ease; }
+.q8-filtered:hover { filter: none; }
+
+/* Below 700px: stack vertically (captions stay under each image) */
+@media (max-width: 700px) {
+  .q8-compare { flex-direction: column; }
+}
+
+
+/* =====================================================================
+   Q9. Responsive Design Principles Summary (Grid)
+   ===================================================================== */
+.q9-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
+.q9-box {
+  padding: 16px;
+  color: #1f2933;
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  transition: color 0.4s ease, background 0.4s ease;
+}
+
+/* Gradient background + text color change on hover */
+.q9-box:hover { color: #ffffff; background: linear-gradient(135deg, #4f46e5, #db2777); }
+
+.q9-box h3 { margin-top: 0; }
+.q9-box pre { margin: 0; padding: 10px; overflow-x: auto; font-size: 0.85rem; color: #1f2933; background: #ffffff; border-radius: 6px; }
+
+/* Below 600px: single column */
+@media (max-width: 600px) {
+  .q9-grid { grid-template-columns: 1fr; }
+}
+
+
+/* =====================================================================
+   Q10. Responsive Dashboard Summary (Grid areas)
+   ===================================================================== */
+.q10-dashboard {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "header  header"
+    "sidebar content";
+  gap: 16px;
+  padding: 16px;
+  background: #e2e8f0;
+  border-radius: 8px;
+  animation: q10-load 0.8s ease-out both;     /* simple load animation */
+}
+
+.q10-header  { grid-area: header; padding: 12px 16px; color: #ffffff; background: #1e3a8a; border-radius: 8px; }
+.q10-header h3 { margin: 0; }
+
+.q10-sidebar { grid-area: sidebar; padding: 12px; background: #ffffff; border-radius: 8px; }
+.q10-sidebar nav { display: flex; flex-direction: column; gap: 6px; }
+.q10-sidebar a { padding: 8px 10px; color: #1e3a8a; text-decoration: none; border-radius: 6px; }
+.q10-sidebar a:hover { background: #dbeafe; }
+
+.q10-content { grid-area: content; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+
+.q10-card {
+  padding: 16px;
+  background: #ffffff;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.q10-card:hover { transform: scale(1.04); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25); }
+.q10-card h4 { margin: 0 0 6px; }
+.q10-card p { margin: 0; }
+
+@keyframes q10-load {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Below 750px: sidebar moves to the top, content stacks below */
+@media (max-width: 750px) {
+  .q10-dashboard {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content";
+  }
+  .q10-sidebar nav { flex-direction: row; flex-wrap: wrap; }
+}
+
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  .q5-card, .q7-page, .q10-dashboard { animation: none; }
+}

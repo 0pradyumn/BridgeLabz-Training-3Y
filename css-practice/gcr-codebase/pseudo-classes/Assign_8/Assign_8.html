@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 8 - CSS Solutions (Q1 to Q10)</title>
+  <!-- One stylesheet holds the CSS of all 10 questions (separated by comments) -->
+  <link rel="stylesheet" href="Assign_8.css">
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>Assignment 8 - CSS Practice</h1>
+    <nav aria-label="Question navigation">
+      <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a>
+      <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- =================================================================
+         Q1. Webpage Demonstrating Pseudo-Classes
+         ================================================================= -->
+    <section id="q1" class="question">
+      <h2>Q1. Pseudo-Classes</h2>
+      <div class="q1-row">
+
+        <article class="q1-card">
+          <a href="#q1" class="q1-link">Hover over me</a>
+          <p><code>:hover</code> applies when the mouse pointer is over an element.</p>
+        </article>
+
+        <article class="q1-card">
+          <button type="button" class="q1-btn q1-focus">Click or Tab to me</button>
+          <p><code>:focus</code> applies when an element is selected by click or keyboard.</p>
+        </article>
+
+        <article class="q1-card">
+          <button type="button" class="q1-btn q1-active">Press and hold</button>
+          <p><code>:active</code> applies while the element is being pressed.</p>
+        </article>
+
+        <article class="q1-card">
+          <ul class="q1-list">
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+            <li>Fourth item</li>
+          </ul>
+          <p><code>:nth-child(odd)</code> styles every odd list item.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q2. Tooltip Demonstration Page
+         ================================================================= -->
+    <section id="q2" class="question">
+      <h2>Q2. CSS Tooltips</h2>
+      <div class="q2-wrapper">
+
+        <span class="q2-item" tabindex="0">&#9733; Star
+          <span class="q2-tooltip">Add to favourites</span>
+        </span>
+
+        <span class="q2-item" tabindex="0">&#9993; Mail
+          <span class="q2-tooltip">Open your inbox</span>
+        </span>
+
+        <span class="q2-item" tabindex="0">&#9881; Settings
+          <span class="q2-tooltip">Change preferences</span>
+        </span>
+
+        <span class="q2-item" tabindex="0">&#10084; Like
+          <span class="q2-tooltip">Show some love</span>
+        </span>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q3. Image Showcase Layout
+         ================================================================= -->
+    <section id="q3" class="question">
+      <h2>Q3. Image Showcase</h2>
+      <div class="q3-gallery">
+        <figure class="q3-figure"><div class="q3-frame"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e76f51'/%3E%3Ccircle cx='140' cy='120' r='70' fill='%23fff' opacity='.35'/%3E%3Crect x='200' y='140' width='150' height='110' rx='12' fill='%23fff' opacity='.25'/%3E%3C/svg%3E" alt="Orange abstract artwork"></div><figcaption>Sunset Orange</figcaption></figure>
+        <figure class="q3-figure"><div class="q3-frame"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%232a9d8f'/%3E%3Ccircle cx='140' cy='120' r='70' fill='%23fff' opacity='.35'/%3E%3Crect x='200' y='140' width='150' height='110' rx='12' fill='%23fff' opacity='.25'/%3E%3C/svg%3E" alt="Teal abstract artwork"></div><figcaption>Ocean Teal</figcaption></figure>
+        <figure class="q3-figure"><div class="q3-frame"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%237c3aed'/%3E%3Ccircle cx='140' cy='120' r='70' fill='%23fff' opacity='.35'/%3E%3Crect x='200' y='140' width='150' height='110' rx='12' fill='%23fff' opacity='.25'/%3E%3C/svg%3E" alt="Purple abstract artwork"></div><figcaption>Twilight Purple</figcaption></figure>
+        <figure class="q3-figure"><div class="q3-frame"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%233f7d4e'/%3E%3Ccircle cx='140' cy='120' r='70' fill='%23fff' opacity='.35'/%3E%3Crect x='200' y='140' width='150' height='110' rx='12' fill='%23fff' opacity='.25'/%3E%3C/svg%3E" alt="Green abstract artwork"></div><figcaption>Forest Green</figcaption></figure>
+        <figure class="q3-figure"><div class="q3-frame"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23e0638a'/%3E%3Ccircle cx='140' cy='120' r='70' fill='%23fff' opacity='.35'/%3E%3Crect x='200' y='140' width='150' height='110' rx='12' fill='%23fff' opacity='.25'/%3E%3C/svg%3E" alt="Pink abstract artwork"></div><figcaption>Rose Pink</figcaption></figure>
+        <figure class="q3-figure"><div class="q3-frame"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%233b82f6'/%3E%3Ccircle cx='140' cy='120' r='70' fill='%23fff' opacity='.35'/%3E%3Crect x='200' y='140' width='150' height='110' rx='12' fill='%23fff' opacity='.25'/%3E%3C/svg%3E" alt="Blue abstract artwork"></div><figcaption>Sky Blue</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q4. CSS Selectors Practice Page
+         ================================================================= -->
+    <section id="q4" class="question">
+      <header>
+        <h2>Q4. CSS Selectors Practice</h2>
+      </header>
+
+      <p>Element selector: this paragraph is styled by the <code>p</code> rule.</p>
+      <p class="highlight">Class selector: this paragraph has <code>class="highlight"</code>.</p>
+      <p id="q4-unique">ID selector: this paragraph has <code>id="q4-unique"</code>.</p>
+
+      <ul>
+        <li>Descendant selector: every list item inside the list.</li>
+        <li>Another list item.</li>
+      </ul>
+
+      <div class="combinators">
+        <p>Child selector (<code>&gt;</code>): direct child paragraph of .combinators.</p>
+        <h3>Heading before a paragraph</h3>
+        <p>Adjacent sibling (<code>+</code>): paragraph right after the h3.</p>
+        <p>General sibling (<code>~</code>): paragraph after the h3.</p>
+        <section><p>Not a direct child, so the child selector skips this paragraph.</p></section>
+      </div>
+
+      <p>
+        Attribute selectors:
+        <a href="https://example.com" target="_blank" rel="noopener">External link (target="_blank")</a> |
+        <a href="#q4">Internal link</a>
+      </p>
+
+      <footer>Q4 footer - semantic structure with header, section and footer.</footer>
+    </section>
+
+    <!-- =================================================================
+         Q5. Styled Button Collection
+         ================================================================= -->
+    <section id="q5" class="question">
+      <h2>Q5. Button Collection</h2>
+      <div class="q5-buttons">
+        <button type="button" class="q5-btn q5-primary">Primary</button>
+        <button type="button" class="q5-btn q5-secondary">Secondary</button>
+        <button type="button" class="q5-btn q5-outline">Outline</button>
+        <button type="button" class="q5-btn q5-primary" disabled>Disabled</button>
+      </div>
+      <p class="note">Hover, press, or Tab to a button to see :hover, :active and :focus. The last one uses :disabled.</p>
+    </section>
+
+    <!-- =================================================================
+         Q6. CSS Animation Demonstration Page
+         ================================================================= -->
+    <section id="q6" class="question">
+      <h2>Q6. CSS Animations</h2>
+      <div class="q6-stage">
+
+        <div class="q6-item">
+          <div class="q6-box"></div>
+          <p>Moving box</p>
+        </div>
+
+        <div class="q6-item">
+          <div class="q6-ball-track"><div class="q6-ball"></div></div>
+          <p>Bouncing ball</p>
+        </div>
+
+        <div class="q6-item">
+          <p class="q6-text">Color changing text</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q7. User Interface Components Page
+         ================================================================= -->
+    <section id="q7" class="question">
+      <h2>Q7. UI Components</h2>
+      <div class="q7-wrapper">
+        <div class="q7-card">
+          <input type="search" class="q7-search" placeholder="Search products..." aria-label="Search">
+          <select class="q7-select" aria-label="Choose category">
+            <option>All categories</option>
+            <option>Electronics</option>
+            <option>Fashion</option>
+            <option>Books</option>
+          </select>
+          <button type="button" class="q7-btn">Search</button>
+          <button type="button" class="q7-btn q7-btn-light">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q8. Box-Sizing Comparison Page
+         ================================================================= -->
+    <section id="q8" class="question">
+      <h2>Q8. Box-Sizing Comparison</h2>
+      <div class="q8-wrapper">
+
+        <div class="q8-box q8-content-box">
+          <h3>content-box (default)</h3>
+          <p>Width 200px + padding 30px each side + border 5px each side = <strong>270px</strong> total.</p>
+        </div>
+
+        <div class="q8-box q8-border-box">
+          <h3>border-box</h3>
+          <p>Padding and border are included, so the total stays <strong>200px</strong>.</p>
+        </div>
+
+      </div>
+      <p class="note">Both boxes have <code>width: 200px</code> and <code>padding: 30px</code>. With <code>box-sizing: border-box</code>, padding and border are counted inside the width, so the box does not grow.</p>
+    </section>
+
+    <!-- =================================================================
+         Q9. Combined Effects Demonstration Page
+         ================================================================= -->
+    <section id="q9" class="question">
+      <h2>Q9. Combined Effects</h2>
+      <div class="q9-row">
+        <button type="button" class="q9-btn q9-grow">Grow &amp; Blue</button>
+        <button type="button" class="q9-btn q9-rotate">Tilt &amp; Green</button>
+        <button type="button" class="q9-btn q9-lift">Lift &amp; Orange</button>
+        <a href="#q9" class="q9-btn q9-link">Link: Scale &amp; Purple</a>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q10. Complete Mini User Interface Layout
+         ================================================================= -->
+    <section id="q10" class="question">
+      <h2>Q10. Mini UI Layout</h2>
+      <div class="q10-page">
+
+        <header class="q10-header"><h3>MiniApp</h3></header>
+
+        <main class="q10-main">
+          <article class="q10-card">
+            <img class="q10-avatar" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%237c3aed'/%3E%3Ccircle cx='140' cy='120' r='70' fill='%23fff' opacity='.35'/%3E%3Crect x='200' y='140' width='150' height='110' rx='12' fill='%23fff' opacity='.25'/%3E%3C/svg%3E" alt="Profile picture">
+            <form class="q10-form" action="#" method="post">
+              <label for="q10-name">Name</label>
+              <input type="text" id="q10-name" placeholder="Your name">
+
+              <label for="q10-email">Email</label>
+              <input type="email" id="q10-email" placeholder="you@example.com">
+
+              <div class="q10-actions">
+                <button type="submit" class="q10-btn">Submit</button>
+                <button type="reset" class="q10-btn q10-btn-alt">Clear</button>
+              </div>
+            </form>
+          </article>
+        </main>
+
+        <footer class="q10-footer">&copy; 2026 MiniApp. All rights reserved.</footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">End of Assignment 8</footer>
+
+</body>
+</html>

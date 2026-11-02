@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 7 - CSS Demonstrations</title>
+  <link rel="stylesheet" href="Assign 7(2).css">
+</head>
+<body class="assignment-seven">
+  <!-- QUESTION 3 also requests a fixed header and footer; this page-wide fixed chrome demonstrates it. -->
+  <header class="fixed-page-header"><a href="#top">CSS LAB</a><span>Assignment 7 · Questions 1-10</span></header>
+  <main id="top" class="css-lab">
+    <section id="q1" class="lab-section">
+      <!-- QUESTION 1: BORDERS AND PADDING DEMONSTRATION -->
+      <p class="q-label">QUESTION 1</p><h1>Borders and Padding</h1>
+      <div class="border-demo-row">
+        <article class="border-sample solid-sample"><h2>Solid border</h2><p>Padding: 12px</p></article>
+        <article class="border-sample dashed-sample"><h2>Dashed border</h2><p>Padding: 22px</p></article>
+        <article class="border-sample double-sample"><h2>Double border</h2><p>Padding: 16px</p></article>
+        <article class="border-sample groove-sample"><h2>Groove border</h2><p>Rounded corners</p></article>
+      </div>
+    </section>
+
+    <section id="q2" class="lab-section">
+      <!-- QUESTION 2: HEIGHT AND WIDTH PRACTICE -->
+      <p class="q-label">QUESTION 2</p><h1>Height and Width Practice</h1>
+      <div class="size-demo-row"><div class="size-box size-px"><h2>Pixels</h2><p>Width: 180px<br>Height: 120px</p></div><div class="size-box size-percent"><h2>Percent</h2><p>Width: 70%<br>min-height: 150px</p></div><div class="size-box size-vh"><h2>Viewport</h2><p>Height: 18vh<br>Max width: 230px</p></div></div>
+    </section>
+
+    <section id="q3" class="lab-section gradient-section">
+      <!-- QUESTION 3: LINEAR AND RADIAL GRADIENTS; FIXED PAGE HEADER/FOOTER AND BACKGROUND ATTACHMENT. -->
+      <p class="q-label">QUESTION 3</p><h1>Gradient Background Webpage</h1>
+      <div class="linear-gradient-panel"><h2>Linear Gradient</h2><p>Color transitions along a straight line.</p></div>
+      <div class="radial-gradient-panel"><h2>Radial Gradient</h2><p>Color transitions outward from a central point.</p></div>
+      <p class="gradient-note">The linear panel uses background-attachment: fixed for a subtle parallax-like effect.</p>
+    </section>
+
+    <section id="q4" class="lab-section">
+      <!-- QUESTION 4: BOX SHADOW AND TEXT SHADOW DEPTH EFFECTS -->
+      <p class="q-label">QUESTION 4</p><h1 class="shadow-heading">Shadows and Depth</h1>
+      <div class="shadow-card-row"><article class="shadow-card shadow-soft"><h2>Soft depth</h2><p>Wide, subtle shadow for a calm surface.</p></article><article class="shadow-card shadow-hard"><h2>Strong depth</h2><p>More pronounced shadow around the card.</p></article><article class="shadow-card shadow-inset"><h2>Inset depth</h2><p>An inset shadow gives the surface a pressed look.</p></article></div>
+    </section>
+
+    <section id="q5" class="lab-section selector-demo">
+      <!-- QUESTION 5: ADVANCED CSS SELECTORS -->
+      <p class="q-label">QUESTION 5</p><h1>Advanced CSS Selectors</h1>
+      <form class="selector-form"><label>Text field <input type="text" placeholder="Attribute selector example"></label><label>Email field <input type="email" placeholder="name@example.com"></label></form>
+      <p class="selector-note">A direct child paragraph is highlighted. The next paragraph uses the adjacent sibling selector. Later paragraphs use the general sibling selector.</p>
+      <div class="selector-list"><p>Direct child paragraph</p><p>Adjacent sibling paragraph</p><ul><li>First list item</li><li>Second list item</li><li>Third list item</li></ul><p>General sibling paragraph after the list</p><a href="https://example.com">HTTPS link (attribute selector)</a></div>
+    </section>
+
+    <section id="q6" class="lab-section">
+      <!-- QUESTION 6: ROTATE, SCALE, TRANSLATE AND SKEW TRANSFORMATIONS -->
+      <p class="q-label">QUESTION 6</p><h1>CSS Transformations Showcase</h1>
+      <div class="transform-row"><figure><div class="transform-box rotate-box">Rotate</div><figcaption>rotate(8deg)</figcaption></figure><figure><div class="transform-box scale-box">Scale</div><figcaption>scale(1.12)</figcaption></figure><figure><div class="transform-box translate-box">Translate</div><figcaption>translateY(-12px)</figcaption></figure><figure><div class="transform-box skew-box">Skew</div><figcaption>skew(-8deg)</figcaption></figure></div>
+    </section>
+
+    <section id="q7" class="lab-section typography-demo">
+      <!-- QUESTION 7: TYPOGRAPHY, FONT FAMILIES, FIRST-LETTER AND FIRST-LINE -->
+      <p class="q-label">QUESTION 7</p><h1>Typography and Text Styling</h1>
+      <article class="typography-article"><p class="serif-sample">A thoughtful approach to typography can make information feel clearer, calmer, and easier to explore. Different font families, weights, and sizes create a useful visual hierarchy.</p><p class="sans-sample">Readable text uses a comfortable line-height, measured letter spacing, and an intentional text alignment. <mark>Highlighted ideas</mark> stand apart, <strong>important statements</strong> carry weight, and <em>emphasized phrases</em> add a softer voice.</p><p class="mono-sample">Font families can work together when each has a clear purpose.</p></article>
+    </section>
+
+    <section id="q8" class="lab-section">
+      <!-- QUESTION 8: BOX MODEL EXPLORATION AND BOX-SIZING COMPARISON -->
+      <p class="q-label">QUESTION 8</p><h1>Box Model Exploration</h1>
+      <div class="box-model-layout"><div class="margin-layer"><span class="layer-label">MARGIN</span><div class="border-layer"><span class="layer-label">BORDER</span><div class="padding-layer"><span class="layer-label">PADDING</span><div class="content-layer">CONTENT</div></div></div></div>
+        <div class="box-sizing-examples"><article><h2>Content-box</h2><div class="content-box-example">Width is content only</div><p>Padding and border are added to the declared width.</p></article><article><h2>Border-box</h2><div class="border-box-example">Width includes padding and border</div><p>The declared width includes the content, padding, and border.</p></article></div>
+      </div>
+    </section>
+
+    <section id="q9" class="lab-section">
+      <!-- QUESTION 9: OUTLINE STYLES, OFFSET AND FOCUS COLOR -->
+      <p class="q-label">QUESTION 9</p><h1>Outline and Focus Styling Form</h1>
+      <form class="outline-form"><label>Name<input class="outline-solid" type="text" placeholder="Your name"></label><label>Email<input class="outline-dashed" type="email" placeholder="you@example.com"></label><label>Message<textarea class="outline-double" rows="4" placeholder="Write a message..."></textarea></label><button type="button">Send message</button></form>
+    </section>
+
+    <section id="q10" class="lab-section">
+      <!-- QUESTION 10: RESPONSIVE NAVIGATION BAR WITH TRANSITIONS -->
+      <p class="q-label">QUESTION 10</p><h1>Navigation Bar and Hover Effects</h1>
+      <nav class="sample-navbar" aria-label="Sample five-link navigation"><a class="active" href="#q10">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></nav>
+      <p class="navbar-note">The active link has a distinct background; hover and focus transitions apply to every link.</p>
+    </section>
+  </main>
+  <footer class="fixed-page-footer">© 2026 CSS Lab · Assignment 7 · HTML and CSS only</footer>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignment 9 - Responsive CSS Solutions (Q1 to Q10)</title>
+  <!-- One stylesheet holds the CSS of all 10 questions (separated by comments) -->
+  <link rel="stylesheet" href="Assign_9.css">
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>Assignment 9 - Responsive CSS</h1>
+    <nav aria-label="Question navigation">
+      <a href="#q1">Q1</a> <a href="#q2">Q2</a> <a href="#q3">Q3</a> <a href="#q4">Q4</a> <a href="#q5">Q5</a>
+      <a href="#q6">Q6</a> <a href="#q7">Q7</a> <a href="#q8">Q8</a> <a href="#q9">Q9</a> <a href="#q10">Q10</a>
+    </nav>
+  </header>
+
+  <main class="page-main">
+
+    <!-- =================================================================
+         Q1. Responsive Image Filter Gallery
+         ================================================================= -->
+    <section id="q1" class="question">
+      <h2>Q1. Responsive Image Filter Gallery</h2>
+      <div class="q1-gallery">
+        <figure class="q1-item"><img class="q1-blur" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e76f51'/%3E%3Cstop offset='1' stop-color='%23f4a261'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Landscape with blur filter"><figcaption>blur(3px)</figcaption></figure>
+        <figure class="q1-item"><img class="q1-grayscale" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232a9d8f'/%3E%3Cstop offset='1' stop-color='%238ecae6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Landscape with grayscale filter"><figcaption>grayscale(100%)</figcaption></figure>
+        <figure class="q1-item"><img class="q1-sepia" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23f9a8d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Landscape with sepia filter"><figcaption>sepia(100%)</figcaption></figure>
+        <figure class="q1-item"><img class="q1-brightness" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%233f7d4e'/%3E%3Cstop offset='1' stop-color='%23d9ed92'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Landscape with brightness filter"><figcaption>brightness(1.6)</figcaption></figure>
+        <figure class="q1-item"><img class="q1-contrast" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e0638a'/%3E%3Cstop offset='1' stop-color='%23ffd6a5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Landscape with contrast filter"><figcaption>contrast(2)</figcaption></figure>
+        <figure class="q1-item"><img class="q1-hue" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%23a5f3fc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Landscape with hue-rotate filter"><figcaption>hue-rotate(120deg)</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q2. Responsive Web Design Layout
+         ================================================================= -->
+    <section id="q2" class="question">
+      <h2>Q2. Responsive Web Design Layout</h2>
+      <div class="q2-site">
+        <header class="q2-header">
+          <div class="q2-logo">BrightWeb</div>
+          <nav class="q2-nav" aria-label="Demo site menu">
+            <a href="#q2">Home</a>
+            <a href="#q2">Services</a>
+            <a href="#q2">About</a>
+            <a href="#q2">Contact</a>
+          </nav>
+        </header>
+
+        <main class="q2-main">
+          <article class="q2-box"><h3>Fast</h3><p>Pages load quickly on every device.</p></article>
+          <article class="q2-box"><h3>Flexible</h3><p>Layouts adapt to any screen size.</p></article>
+          <article class="q2-box"><h3>Friendly</h3><p>Clear design that is easy to use.</p></article>
+        </main>
+
+        <footer class="q2-footer">&copy; 2026 BrightWeb. All rights reserved.</footer>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q3. Responsive Cards with Media Queries
+         ================================================================= -->
+    <section id="q3" class="question">
+      <h2>Q3. Responsive Cards with Media Queries</h2>
+      <div class="q3-row">
+        <article class="q3-card"><h3>Card One</h3><p>Four columns on desktop screens.</p></article>
+        <article class="q3-card"><h3>Card Two</h3><p>Two columns when the width is 900px or less.</p></article>
+        <article class="q3-card"><h3>Card Three</h3><p>One column when the width is 600px or less.</p></article>
+        <article class="q3-card"><h3>Card Four</h3><p>Hover to change the background color.</p></article>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q4. Responsive Typography
+         ================================================================= -->
+    <section id="q4" class="question">
+      <h2>Q4. Responsive Typography</h2>
+      <div class="q4-demo">
+        <h1>Text That Scales With The Screen</h1>
+        <p>This heading and paragraph use the clamp() function. The font size never goes below the minimum, grows smoothly with the viewport width, and stops at the maximum value. Resize the window to watch it change. Below 700px the line height and spacing are adjusted so the text stays comfortable to read on small screens.</p>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q5. Filter Cards with Animation
+         ================================================================= -->
+    <section id="q5" class="question">
+      <h2>Q5. Filter Cards with Animation</h2>
+      <div class="q5-row">
+        <article class="q5-card"><img class="q5-gray" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e76f51'/%3E%3Cstop offset='1' stop-color='%23f4a261'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Profile photo of Anita"><h3>Anita Rao</h3><p>UI Designer</p></article>
+        <article class="q5-card"><img class="q5-sepia" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232a9d8f'/%3E%3Cstop offset='1' stop-color='%238ecae6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Profile photo of Karan"><h3>Karan Mehta</h3><p>Front-end Developer</p></article>
+        <article class="q5-card"><img class="q5-gray" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23f9a8d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Profile photo of Sara"><h3>Sara Khan</h3><p>Project Manager</p></article>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q6. Responsive CSS Cheat Sheet
+         ================================================================= -->
+    <section id="q6" class="question">
+      <h2>Q6. Responsive CSS Cheat Sheet</h2>
+      <div class="q6-grid">
+        <article class="q6-box"><h3>Filters</h3><p><code>filter: grayscale(100%);</code> changes how an image looks without editing it.</p></article>
+        <article class="q6-box"><h3>Media Queries</h3><p><code>@media (max-width: 700px) { ... }</code> applies styles only on small screens.</p></article>
+        <article class="q6-box"><h3>Responsive Design</h3><p>Layouts that adapt to any device using fluid grids, flexible images and breakpoints.</p></article>
+        <article class="q6-box"><h3>Typography</h3><p><code>font-size: clamp(1rem, 2vw, 1.5rem);</code> scales text smoothly.</p></article>
+        <article class="q6-box"><h3>Flexbox</h3><p><code>display: flex; flex-wrap: wrap;</code> aligns items in one direction.</p></article>
+        <article class="q6-box"><h3>Grid</h3><p><code>grid-template-columns: repeat(3, 1fr);</code> builds two-dimensional layouts.</p></article>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q7. Combined Responsive Web Demo
+         ================================================================= -->
+    <section id="q7" class="question">
+      <h2>Q7. Combined Responsive Web Demo</h2>
+      <div class="q7-page">
+        <header class="q7-header">
+          <div class="q7-logo">ResponsiveLab</div>
+          <nav class="q7-nav" aria-label="Demo menu">
+            <a href="#q7">Gallery</a>
+            <a href="#q7">Learn</a>
+            <a href="#q7">Cheat Sheet</a>
+          </nav>
+        </header>
+
+        <main class="q7-main">
+          <section class="q7-panel">
+            <h3>Image Gallery</h3>
+            <div class="q7-thumbs">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23e76f51'/%3E%3Cstop offset='1' stop-color='%23f4a261'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Thumbnail 1">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%232a9d8f'/%3E%3Cstop offset='1' stop-color='%238ecae6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Thumbnail 2">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23f9a8d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Thumbnail 3">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%233f7d4e'/%3E%3Cstop offset='1' stop-color='%23d9ed92'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Thumbnail 4">
+            </div>
+          </section>
+
+          <section class="q7-panel">
+            <h3>What is Responsive Design?</h3>
+            <p>Responsive design makes one website look good on phones, tablets and desktops by using flexible layouts, scalable images and media queries.</p>
+          </section>
+
+          <section class="q7-panel">
+            <h3>Cheat Sheet Preview</h3>
+            <ul>
+              <li><code>@media</code> - breakpoints</li>
+              <li><code>clamp()</code> - fluid text</li>
+              <li><code>filter</code> - image effects</li>
+            </ul>
+          </section>
+        </main>
+
+        <footer class="q7-footer">
+          <address>Contact: hello@responsivelab.example | +91 90000 00000</address>
+        </footer>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q8. Filter Comparison Layout
+         ================================================================= -->
+    <section id="q8" class="question">
+      <h2>Q8. Filter Comparison Layout</h2>
+      <div class="q8-compare">
+        <figure class="q8-figure"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%23a5f3fc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Original image"><figcaption>Before: original image</figcaption></figure>
+        <figure class="q8-figure"><img class="q8-filtered" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%233b82f6'/%3E%3Cstop offset='1' stop-color='%23a5f3fc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23g)'/%3E%3Ccircle cx='600' cy='130' r='60' fill='%23fff7c2'/%3E%3Cpolygon points='0,500 220,220 400,500' fill='%232f4858'/%3E%3Cpolygon points='250,500 480,170 760,500' fill='%231d3557'/%3E%3Cpolygon points='560,500 700,330 800,420 800,500' fill='%23457b9d'/%3E%3C/svg%3E" alt="Image with brightness and contrast filter"><figcaption>After: brightness + contrast (hover to remove)</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q9. Responsive Design Principles Summary
+         ================================================================= -->
+    <section id="q9" class="question">
+      <h2>Q9. Responsive Design Principles Summary</h2>
+      <div class="q9-grid">
+        <article class="q9-box">
+          <h3>Fluid Layouts</h3>
+          <p>Use percentages and flexible units so layouts stretch and shrink with the screen.</p>
+          <pre><code>.container {
+  width: 90%;
+  max-width: 1100px;
+}</code></pre>
+        </article>
+        <article class="q9-box">
+          <h3>Flexible Media</h3>
+          <p>Images and videos scale inside their containers and never overflow.</p>
+          <pre><code>img {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+        </article>
+        <article class="q9-box">
+          <h3>Breakpoints</h3>
+          <p>Media queries change the layout at specific screen widths.</p>
+          <pre><code>@media (max-width: 600px) {
+  .grid { display: block; }
+}</code></pre>
+        </article>
+      </div>
+    </section>
+
+    <!-- =================================================================
+         Q10. Responsive Dashboard Summary
+         ================================================================= -->
+    <section id="q10" class="question">
+      <h2>Q10. Responsive Dashboard Summary</h2>
+      <div class="q10-dashboard">
+        <header class="q10-header"><h3>Responsive CSS Dashboard</h3></header>
+
+        <aside class="q10-sidebar">
+          <nav aria-label="Dashboard menu">
+            <a href="#q10">Overview</a>
+            <a href="#q10">Lessons</a>
+            <a href="#q10">Practice</a>
+            <a href="#q10">Settings</a>
+          </nav>
+        </aside>
+
+        <main class="q10-content">
+          <article class="q10-card"><h4>Filters</h4><p>Blur, grayscale, sepia and more.</p></article>
+          <article class="q10-card"><h4>Typography</h4><p>Scale text with clamp().</p></article>
+          <article class="q10-card"><h4>Media Queries</h4><p>Change layouts per breakpoint.</p></article>
+          <article class="q10-card"><h4>Cheat Sheet Links</h4><p>Quick reference for all topics.</p></article>
+        </main>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">End of Assignment 9</footer>
+
+</body>
+</html>

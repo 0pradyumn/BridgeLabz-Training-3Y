@@ -1,0 +1,124 @@
+/* =====================================================================
+   ASSIGNMENT 10 - Custom CSS for Bootstrap Solutions (Q1 to Q10)
+   Bootstrap 5.3 is loaded from the CDN; this file only adds small extras.
+   ===================================================================== */
+
+
+/* =====================================================================
+   COMMON STYLES (shared by all questions)
+   ===================================================================== */
+.question-section {
+  margin: 30px auto;
+  max-width: 1200px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  overflow: hidden;            /* keeps rounded corners on full-width headers */
+}
+
+/* Small label showing which question the section belongs to */
+.q-label {
+  margin: 0;
+  padding: 8px 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background: #343a40;
+}
+
+
+/* =====================================================================
+   Q1. Company Landing Page
+   ===================================================================== */
+/* (Uses Bootstrap classes only - no custom CSS needed)  */
+
+
+/* =====================================================================
+   Q2. Personal Portfolio Basics
+   ===================================================================== */
+.profile-img { width: 140px; height: 140px; object-fit: cover; border: 4px solid #ffffff; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); }
+.contact-form { max-width: 480px; padding-bottom: 2rem; }
+
+
+/* =====================================================================
+   Q3. Product Catalog (hover effect with transition)
+   ===================================================================== */
+.product-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.product-card:hover { transform: translateY(-6px); box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.2) !important; }
+
+
+/* =====================================================================
+   Q4. Restaurant Menu Page
+   ===================================================================== */
+/* (Uses Bootstrap classes only - no custom CSS needed)  */
+
+
+/* =====================================================================
+   Q5. Custom Themed Blog Homepage
+   Bootstrap 5.3 buttons use fixed colors, so button variables are set too.
+   ===================================================================== */
+.q5-theme {
+  /* Theme variable overrides */
+  --bs-primary: #0f766e;
+  --bs-primary-rgb: 15, 118, 110;
+  --bs-font-sans-serif: "Poppins", system-ui, sans-serif;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  font-family: var(--bs-body-font-family);
+}
+
+/* Headings use a serif Google Font in the theme color */
+.q5-theme h1,
+.q5-theme h2,
+.q5-theme h3 { font-family: "Merriweather", Georgia, serif; }
+.q5-theme .card-title { color: var(--bs-primary); }
+
+/* Apply theme color to primary buttons */
+.q5-theme .btn-primary {
+  --bs-btn-bg: #0f766e;
+  --bs-btn-border-color: #0f766e;
+  --bs-btn-hover-bg: #115e59;
+  --bs-btn-hover-border-color: #115e59;
+  --bs-btn-active-bg: #134e4a;
+  --bs-btn-active-border-color: #134e4a;
+  --bs-btn-disabled-bg: #0f766e;
+  --bs-btn-disabled-border-color: #0f766e;
+}
+
+/* Themed cards */
+.q5-theme .card { border: 0; border-top: 4px solid var(--bs-primary); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12); }
+
+
+/* =====================================================================
+   Q6. Notifications Dashboard
+   ===================================================================== */
+/* (Uses Bootstrap classes only - no custom CSS needed)  */
+
+
+/* =====================================================================
+   Q7. Task Tracker with Badges
+   ===================================================================== */
+.task-card { max-width: 560px; }
+
+
+/* =====================================================================
+   Q8. Pricing Plans (hover effect with transition)
+   ===================================================================== */
+.plan-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.plan-card:hover { transform: translateY(-8px); box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25) !important; }
+
+
+/* =====================================================================
+   Q9. Blog Pagination & Pager
+   ===================================================================== */
+/* (Uses Bootstrap classes only - no custom CSS needed)  */
+
+
+/* =====================================================================
+   Q10. Travel Agency Showcase
+   ===================================================================== */
+.carousel-img { height: 360px; object-fit: cover; }
+.caption-bg { background: rgba(0, 0, 0, 0.5); border-radius: 8px; }
+
+@media (max-width: 576px) {
+  .carousel-img { height: 240px; }
+  .caption-bg p { display: none; }     /* keep captions short on small phones */
+}

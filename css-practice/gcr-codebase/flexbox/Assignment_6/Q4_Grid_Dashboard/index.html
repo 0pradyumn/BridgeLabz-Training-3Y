@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <header class="topbar"><div class="brand">Pulse<span>Board</span></div><div class="user">Welcome back, Jordan</div></header>
+    <aside class="sidebar">
+      <p class="nav-label">WORKSPACE</p>
+      <a class="active" href="#overview">▦ &nbsp; Overview</a><a href="#analytics">◷ &nbsp; Analytics</a><a href="#projects">▤ &nbsp; Projects</a><a href="#settings">⚙ &nbsp; Settings</a>
+    </aside>
+    <main class="content" id="overview">
+      <div class="content-heading"><div><p class="eyebrow">MONDAY, NOVEMBER 2</p><h1>Dashboard overview</h1></div><button type="button">This month⌄</button></div>
+      <section class="stats" aria-label="Dashboard metrics">
+        <article class="stat"><p>Total revenue</p><h2>$24,680</h2><span>↑ 12.8% this month</span></article>
+        <article class="stat"><p>Active users</p><h2>8,549</h2><span>↑ 8.2% this month</span></article>
+        <article class="stat"><p>Conversion rate</p><h2>4.86%</h2><span>↑ 1.4% this month</span></article>
+        <article class="stat wide" id="analytics"><p>Performance summary</p><h2>You're on track</h2><p class="description">Revenue and engagement are trending upward. Keep focusing on returning customers and the strongest-performing campaigns.</p><div class="bars" aria-label="Illustrative weekly activity"><i style="height:35%"></i><i style="height:58%"></i><i style="height:44%"></i><i style="height:78%"></i><i style="height:62%"></i><i style="height:92%"></i><i style="height:72%"></i><i style="height:100%"></i></div></article>
+        <article class="stat" id="projects"><p>Tasks completed</p><h2>128</h2><span>Of 150 planned</span></article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

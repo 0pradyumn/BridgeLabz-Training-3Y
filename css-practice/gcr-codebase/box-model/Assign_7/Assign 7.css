@@ -1,0 +1,134 @@
+/* ================================================================
+   ASSIGNMENT 7 - SINGLE COMBINED CSS FILE
+   Comments identify the matching question. All examples are CSS-only.
+   ================================================================ */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body.assignment-seven { margin: 0; padding: 70px 0 62px; color: #202a3a; background: #f3f5f9; font: 16px/1.6 Arial, Helvetica, sans-serif; }
+.fixed-page-header, .fixed-page-footer { position: fixed; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 13px clamp(14px, 4vw, 40px); color: #fff; background: #1e2a40; }
+.fixed-page-header { top: 0; } .fixed-page-footer { bottom: 0; justify-content: center; font-size: .86rem; }
+.fixed-page-header a { color: #fff; text-decoration: none; font-weight: 900; letter-spacing: .12em; }
+.fixed-page-header span { color: #cbd3e4; font-size: .88rem; }
+.css-lab { width: min(1150px, calc(100% - 28px)); margin: 25px auto; }
+.lab-section { margin: 24px 0; padding: clamp(18px, 3vw, 30px); background: #fff; border: 1px solid #e3e8ef; border-radius: 16px; box-shadow: 0 8px 25px #1e2a410b; scroll-margin-top: 85px; overflow: hidden; }
+.lab-section > h1 { margin: 0 0 18px; font-size: clamp(1.5rem, 3vw, 2.15rem); }
+.q-label { margin: 0 0 4px; color: #6a5ce5; font-size: .7rem; font-weight: 900; letter-spacing: .15em; }
+
+/* QUESTION 1 - distinct border styles, corner radius, inner padding and hover transition. */
+.border-demo-row { display: flex; align-items: stretch; flex-wrap: wrap; gap: 16px; }
+.border-sample { flex: 1 1 190px; min-height: 150px; padding: 16px; background: #f8f9fc; border-radius: 8px; transition: border-color .3s ease, transform .3s ease; }
+.border-sample:hover { border-color: #6a5ce5; transform: translateY(-4px); }
+.border-sample h2 { margin: 0 0 8px; font-size: 1.1rem; }
+.solid-sample { border: 3px solid #55749a; padding: 12px; } .dashed-sample { border: 3px dashed #54927c; padding: 22px; }
+.double-sample { border: 5px double #9a6aa6; padding: 16px; border-radius: 18px; } .groove-sample { border: 6px groove #c18b52; padding: 18px; border-radius: 28px; }
+
+/* QUESTION 2 - box dimensions use px, %, vh and em; flex alignment centers each box. */
+.size-demo-row { min-height: 300px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px; padding: 15px; background: #f6f8fc; border-radius: 12px; overflow: hidden; }
+.size-box { display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 1em; text-align: center; border-radius: 12px; overflow: auto; }
+.size-box h2 { margin: 4px 0; } .size-box p { margin: 4px 0; }
+.size-px { width: 180px; height: 120px; background: #d9e9ff; }
+.size-percent { width: 40%; min-height: 150px; max-width: 280px; background: #dff2e7; }
+.size-vh { width: 22vw; max-width: 230px; min-height: 18vh; max-height: 220px; background: #f8e6d8; }
+
+/* QUESTION 3 - linear and radial gradients; section provides a fixed-background effect. */
+.gradient-section { background: linear-gradient(#fff, #f8faff); }
+.linear-gradient-panel, .radial-gradient-panel { display: flex; flex-direction: column; justify-content: center; min-height: 185px; margin: 13px 0; padding: 25px; color: #fff; border-radius: 13px; }
+.linear-gradient-panel { background: linear-gradient(115deg, #4053a8, #7d72d6, #df9ab9); background-attachment: fixed; }
+.radial-gradient-panel { background: radial-gradient(circle at center, #f0c987 0, #c5798d 42%, #514b9c 100%); }
+.linear-gradient-panel h2, .radial-gradient-panel h2 { margin: 0 0 6px; font-size: 1.6rem; }
+.gradient-note { color: #687387; font-size: .9rem; }
+
+/* QUESTION 4 - three different card shadows, heading text-shadow and lift on hover. */
+.shadow-heading { text-shadow: 2px 3px 0 #d8dded; }
+.shadow-card-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.shadow-card { min-height: 175px; padding: 22px; border-radius: 14px; background: #fff; transition: transform .3s ease, box-shadow .3s ease; }
+.shadow-card h2 { text-shadow: 1px 2px 3px #25344a40; }
+.shadow-soft { box-shadow: 0 8px 25px #2c42601e; } .shadow-hard { box-shadow: 8px 10px 0 #d6dceb; } .shadow-inset { box-shadow: inset 0 0 18px #2d46602b, 0 3px 9px #23334b0a; }
+.shadow-card:hover { transform: translateY(-9px); box-shadow: 0 20px 35px #1e2a4130; }
+
+/* QUESTION 5 - attribute selectors, pseudo-classes, pseudo-elements and combinators. */
+.selector-form { display: flex; flex-wrap: wrap; gap: 14px; }
+.selector-form label { display: grid; gap: 5px; color: #5c6679; }
+.selector-form input[type="text"] { border: 2px solid #7a8eb2; padding: 9px; border-radius: 7px; }
+.selector-form input:focus { outline: 3px solid #c9c4ff; border-color: #6557d9; }
+.selector-note { color: #6a7588; }
+.selector-list { padding: 15px; border-radius: 10px; background: #f6f8fc; }
+.selector-list > p:first-child { padding: 8px; color: #1c6c55; background: #e1f4ea; } /* child combinator + :first-child */
+.selector-list > p:first-child::before { content: "Direct child: "; font-weight: 900; } /* ::before pseudo-element */
+.selector-list > p:nth-child(2) { color: #7754a0; } /* :nth-child pseudo-class */
+.selector-list > p:nth-child(2) + ul { border-left: 3px solid #a9a1eb; padding-left: 35px; } /* adjacent sibling + child */
+.selector-list li:nth-child(2) { color: #bb5b3d; font-weight: 800; }
+.selector-list li:hover { background: #eeeaff; }
+.selector-list ul ~ p { margin-top: 16px; color: #476a91; } /* general sibling combinator */
+.selector-list ul ~ p::after { content: " (general sibling)"; font-size: .75rem; } /* ::after pseudo-element */
+.selector-list a[href^="https"] { color: #167a59; font-weight: 800; } /* href begins with https */
+.selector-list p { font-family: Arial, sans-serif; } /* descendant selector */
+
+/* QUESTION 6 - four transformations activate on hover with the requested transition. */
+.transform-row { display: flex; flex-wrap: wrap; justify-content: space-around; gap: 30px; padding: 20px 5px; }
+.transform-row figure { margin: 0; width: 170px; text-align: center; }
+.transform-box { display: grid; place-items: center; width: 145px; height: 115px; margin: 0 auto 18px; color: #fff; font-weight: 900; border-radius: 12px; background: linear-gradient(135deg, #6176c7, #9c83d9); transition: all 0.4s ease; }
+.rotate-box:hover { transform: rotate(8deg); } .scale-box:hover { transform: scale(1.12); }
+.translate-box:hover { transform: translateY(-12px); } .skew-box:hover { transform: skew(-8deg); }
+.transform-row figcaption { color: #657085; font-size: .9rem; }
+
+/* QUESTION 7 - font families, weights, sizes, line-height, letter-spacing, mark/strong/em. */
+.typography-article { max-width: 800px; margin: auto; padding: 22px; border-radius: 12px; background: #f9f8f5; }
+.typography-article p { line-height: 1.85; letter-spacing: .025em; }
+.serif-sample { font: 1.22rem/1.8 Georgia, "Times New Roman", serif; text-align: justify; }
+.serif-sample::first-letter { float: left; padding: 3px 8px 0 0; color: #6956bb; font-size: 3.1rem; line-height: 1; font-weight: 700; }
+.serif-sample::first-line { letter-spacing: .07em; }
+.sans-sample { font-family: Arial, Helvetica, sans-serif; font-weight: 400; }
+.typography-article mark { color: #603b10; background: #ffe39b; padding: 1px 4px; }
+.typography-article strong { color: #9b3f48; } .typography-article em { color: #426c9b; }
+.mono-sample { font: 0.95rem/1.7 "Courier New", monospace; color: #546078; }
+
+/* QUESTION 8 - margin, border, padding, content and content-box vs border-box. */
+.box-model-layout { display: grid; grid-template-columns: minmax(260px, 1fr) minmax(250px, 1fr); align-items: center; gap: 28px; }
+.margin-layer { display: grid; place-items: center; min-height: 260px; padding: 25px; background: #f8e1b4; outline: 1px dashed #9b6f31; }
+.border-layer { display: grid; place-items: center; width: 100%; padding: 22px; border: 10px solid #7c94be; background: #dce5f3; }
+.padding-layer { display: grid; place-items: center; width: 100%; padding: 22px; background: #d5efdf; }
+.content-layer { display: grid; place-items: center; min-height: 70px; width: 100%; color: #fff; background: #517b68; font-weight: 900; }
+.layer-label { margin-bottom: 7px; font-size: .7rem; font-weight: 900; letter-spacing: .08em; }
+.box-sizing-examples { display: grid; gap: 14px; }
+.box-sizing-examples article { padding: 14px; border-radius: 10px; background: #f5f7fb; }
+.box-sizing-examples h2 { margin: 0 0 8px; font-size: 1rem; }
+.content-box-example { box-sizing: content-box; width: 200px; padding: 15px; border: 5px solid #9c6ba7; background: #eadcf0; }
+.border-box-example { box-sizing: border-box; width: 200px; box-sizing: border-box; padding: 15px; border: 5px solid #438d76; background: #dcefe8; }
+.box-sizing-examples p { margin-bottom: 0; color: #697487; font-size: .85rem; }
+
+/* QUESTION 9 - outline styles and offsets; focus changes outline color. */
+.outline-form { max-width: 520px; display: grid; gap: 14px; margin: auto; padding: 20px; border-radius: 14px; background: #f7f8fc; box-shadow: 0 8px 22px #1e2a4112; }
+.outline-form label { display: grid; gap: 6px; color: #536076; font-weight: 700; }
+.outline-form input, .outline-form textarea { width: 100%; padding: 11px; border: 1px solid #cbd3e0; border-radius: 8px; font: inherit; background: #fff; }
+.outline-solid { outline: 2px solid #8a9bb8; outline-offset: 2px; }
+.outline-dashed { outline: 2px dashed #72a18f; outline-offset: 4px; }
+.outline-double { outline: 3px double #9a83c4; outline-offset: 3px; resize: vertical; }
+.outline-form input:focus, .outline-form textarea:focus { outline-color: #d35e56; box-shadow: 0 0 0 3px #f5d8d5; }
+.outline-form button { justify-self: start; padding: 10px 16px; border: 0; border-radius: 8px; color: #fff; background: #5668b9; }
+
+/* QUESTION 10 - five-link responsive nav, transition, active link and page footer. */
+.sample-navbar { display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; gap: 8px; padding: 13px; border: 1px solid #dfe4ec; border-radius: 12px; background: #f7f8fc; }
+.sample-navbar a { flex: 1 1 auto; padding: 12px 16px; border: 1px solid transparent; border-radius: 8px; color: #4f5c72; text-align: center; text-decoration: none; font-weight: 800; transition: all 0.3s ease; }
+.sample-navbar a:hover, .sample-navbar a:focus { border-color: #6976cd; color: #4c4fb0; background: #e9eaff; transform: translateY(-2px); }
+.sample-navbar a.active { color: #fff; background: #5866b8; border-color: #5866b8; }
+.navbar-note { margin-bottom: 0; color: #6c778a; font-size: .9rem; }
+
+/* Responsive adjustments for small screens. */
+@media (max-width: 800px) {
+  .shadow-card-row { grid-template-columns: 1fr; }
+  .box-model-layout { grid-template-columns: 1fr; }
+  .size-demo-row { justify-content: center; }
+}
+@media (max-width: 700px) {
+  .fixed-page-header { gap: 4px; flex-direction: column; align-items: flex-start; }
+  body.assignment-seven { padding-top: 86px; }
+  .border-demo-row, .transform-row { flex-direction: column; align-items: center; }
+  .size-box { width: min(100%, 280px); min-height: 120px; }
+  .size-percent, .size-vh { width: min(100%, 280px); }
+  .sample-navbar { flex-direction: column; align-items: stretch; }
+  .sample-navbar a { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}

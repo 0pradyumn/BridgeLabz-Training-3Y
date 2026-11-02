@@ -1,0 +1,573 @@
+/* =====================================================================
+   ASSIGNMENT 8 - CSS Solutions (Q1 to Q10)
+   Every question has its own prefix (q1-, q2-, ...) so rules never clash.
+   ===================================================================== */
+
+
+/* =====================================================================
+   COMMON PAGE STYLES (shared by all questions)
+   ===================================================================== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #1f2933;
+  background: #eef1f6;
+}
+
+.page-header {
+  padding: 20px;
+  text-align: center;
+  color: #ffffff;
+  background: #243b6b;
+}
+
+.page-header h1 { margin: 0 0 10px; }
+
+.page-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.page-header a {
+  padding: 4px 10px;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+}
+
+.page-header a:hover { background: #ffffff; color: #243b6b; }
+
+main { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+/* Each question sits in its own white panel */
+.question {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.question h2 {
+  margin-top: 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #243b6b;
+}
+
+.note { margin-top: 20px; color: #52606d; text-align: center; }
+
+.page-footer { padding: 15px; text-align: center; color: #ffffff; background: #243b6b; }
+
+
+/* =====================================================================
+   Q1. Pseudo-Classes (Flexbox row)
+   ===================================================================== */
+.q1-row {
+  display: flex;
+  flex-wrap: wrap;           /* wraps on small screens */
+  gap: 15px;
+}
+
+.q1-card {
+  flex: 1 1 200px;
+  padding: 15px;
+  text-align: center;
+  background: #f5f7fa;
+  border: 1px solid #cbd2d9;
+  border-radius: 8px;
+}
+
+.q1-card p { font-size: 0.9rem; }
+
+/* :hover on a link */
+.q1-link { color: #1d4ed8; font-weight: bold; text-decoration: none; padding: 6px 10px; border-radius: 4px; }
+.q1-link:hover { background: #1d4ed8; color: #ffffff; }
+
+.q1-btn {
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  background: #475569;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* :focus on a button */
+.q1-focus:focus { background: #15803d; outline: 3px solid #86efac; }
+
+/* :active on a button (while pressed) */
+.q1-active:active { background: #b91c1c; transform: scale(0.95); }
+
+/* :nth-child on list items */
+.q1-list { margin: 0; padding: 0; list-style: none; text-align: left; }
+.q1-list li { padding: 6px 10px; background: #ffffff; }
+.q1-list li:nth-child(odd) { background: #fde68a; }
+.q1-list li:nth-child(2) { font-weight: bold; }
+.q1-list li:hover { background: #bfdbfe; }
+
+
+/* =====================================================================
+   Q2. Tooltips (pure CSS, centered with Flexbox)
+   ===================================================================== */
+.q2-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  min-height: 180px;
+  padding-top: 40px;
+}
+
+.q2-item {
+  position: relative;               /* anchor for the absolute tooltip */
+  padding: 10px 16px;
+  font-size: 1.1rem;
+  background: #e0e7ff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.q2-tooltip {
+  position: absolute;
+  bottom: 120%;                     /* above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  color: #ffffff;
+  background: #1f2937;
+  border-radius: 4px;
+  opacity: 0;                       /* hidden by default */
+  pointer-events: none;
+  transition: 0.3s ease-in-out;     /* smooth fade-in */
+}
+
+/* Small arrow under the tooltip */
+.q2-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid transparent;
+  border-top-color: #1f2937;
+}
+
+.q2-item:hover .q2-tooltip,
+.q2-item:focus .q2-tooltip { opacity: 1; }
+
+
+/* =====================================================================
+   Q3. Image Showcase (Grid, 1 column below 700px)
+   ===================================================================== */
+.q3-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.q3-figure { margin: 0; }
+
+/* Frame hides the overflow when the image scales up and holds the overlay */
+.q3-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.q3-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+/* Semi-transparent dark overlay, hidden until hover */
+.q3-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.q3-frame:hover img { transform: scale(1.1); }
+.q3-frame:hover::after { opacity: 1; }
+
+.q3-figure figcaption { margin-top: 8px; text-align: center; font-weight: bold; }
+
+@media (max-width: 900px) { .q3-gallery { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .q3-gallery { grid-template-columns: 1fr; } }
+
+
+/* =====================================================================
+   Q4. Selectors Practice (all rules scoped inside #q4)
+   ===================================================================== */
+
+/* Element selector: all paragraphs inside Q4 */
+#q4 p { margin: 10px 0; padding: 8px 12px; background: #f1f5f9; }
+
+/* Class selector */
+#q4 .highlight { background: #fef08a; border-left: 5px solid #ca8a04; }
+
+/* ID selector */
+#q4 #q4-unique { background: #fecaca; border-left: 5px solid #dc2626; }
+
+/* Descendant selector: any li inside a ul within Q4 */
+#q4 ul li { margin-bottom: 4px; color: #1d4ed8; }
+
+/* Child selector: only direct paragraph children of .combinators */
+#q4 .combinators > p { border: 2px dashed #7c3aed; }
+
+/* Adjacent sibling: the paragraph immediately after the h3 */
+#q4 .combinators h3 + p { background: #bbf7d0; }
+
+/* General sibling: every paragraph after the h3 (sharing the same parent) */
+#q4 .combinators h3 ~ p { font-style: italic; }
+
+/* Attribute selectors */
+#q4 a[target="_blank"] { color: #be123c; font-weight: bold; }
+#q4 a[href^="#"] { color: #0f766e; }
+
+/* Header and footer structure with padding/margins */
+#q4 > header h2 { margin-bottom: 15px; }
+#q4 footer { margin-top: 20px; padding: 10px; text-align: center; color: #ffffff; background: #475569; border-radius: 6px; }
+
+
+/* =====================================================================
+   Q5. Styled Button Collection
+   ===================================================================== */
+.q5-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Base style shared by every button */
+.q5-btn {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.q5-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 14px rgba(0, 0, 0, 0.3); }
+.q5-btn:active { transform: translateY(0); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); }
+.q5-btn:focus { outline: 3px solid #fbbf24; outline-offset: 3px; }
+
+.q5-primary { color: #ffffff; background: #2563eb; }
+.q5-primary:hover { background: #1d4ed8; }
+
+.q5-secondary { color: #ffffff; background: #64748b; }
+.q5-secondary:hover { background: #475569; }
+
+.q5-outline { color: #2563eb; background: transparent; border-color: #2563eb; box-shadow: none; }
+.q5-outline:hover { color: #ffffff; background: #2563eb; }
+
+/* :disabled state */
+.q5-btn:disabled {
+  color: #9ca3af;
+  background: #e5e7eb;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* =====================================================================
+   Q6. CSS Animations (centered horizontally and vertically)
+   ===================================================================== */
+.q6-stage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* horizontal centering */
+  align-items: center;       /* vertical centering */
+  gap: 60px;
+  min-height: 300px;
+  background: #0f172a;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.q6-item { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+
+/* 1) Moving box - slides left/right with alternating direction */
+.q6-box {
+  width: 60px;
+  height: 60px;
+  background: #38bdf8;
+  border-radius: 8px;
+  animation: q6-move 2s ease-in-out 0.5s infinite alternate;
+}
+
+@keyframes q6-move {
+  from { transform: translateX(-50px); }
+  to   { transform: translateX(50px) rotate(90deg); }
+}
+
+/* 2) Bouncing ball - moves up and down */
+.q6-ball-track { height: 120px; display: flex; align-items: flex-end; }
+
+.q6-ball {
+  width: 40px;
+  height: 40px;
+  background: #fb923c;
+  border-radius: 50%;
+  animation: q6-bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes q6-bounce {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-80px); }
+}
+
+/* 3) Color changing text - delayed start, runs 5 times */
+.q6-text {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  animation: q6-color 3s ease-in-out 1s 5 normal;
+}
+
+@keyframes q6-color {
+  0%   { color: #f87171; }
+  33%  { color: #facc15; }
+  66%  { color: #4ade80; }
+  100% { color: #60a5fa; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .q6-box, .q6-ball, .q6-text { animation: none; }
+}
+
+
+/* =====================================================================
+   Q7. User Interface Components (card with soft gradient background)
+   ===================================================================== */
+.q7-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 15px;
+  background: linear-gradient(135deg, #e0f2fe, #ede9fe);
+  border-radius: 8px;
+}
+
+.q7-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.q7-search,
+.q7-select {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: 0.2s ease;
+}
+
+.q7-search { min-width: 200px; }
+
+.q7-search:hover,
+.q7-select:hover { border-color: #6366f1; }
+
+.q7-search:focus,
+.q7-select:focus { outline: none; border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.35); }
+
+.q7-btn {
+  padding: 10px 18px;
+  font-size: 1rem;
+  color: #ffffff;
+  background: #4f46e5;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.q7-btn:hover { background: #4338ca; }
+.q7-btn:focus { outline: 3px solid #c7d2fe; }
+.q7-btn:active { transform: scale(0.96); }
+
+.q7-btn-light { color: #4f46e5; background: #eef2ff; }
+.q7-btn-light:hover { background: #c7d2fe; }
+
+
+/* =====================================================================
+   Q8. Box-Sizing Comparison
+   ===================================================================== */
+.q8-wrapper {
+  display: flex;
+  flex-wrap: wrap;           /* stack on small screens */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* Same width, padding and border for both boxes */
+.q8-box {
+  width: 200px;
+  padding: 30px;
+  border: 5px solid #1f2937;
+}
+
+.q8-box h3 { margin-top: 0; font-size: 1.05rem; }
+.q8-box p { margin: 0; font-size: 0.9rem; }
+
+/* Default sizing: padding + border are ADDED to the width (total 270px) */
+.q8-content-box { box-sizing: content-box; background: #fca5a5; }
+
+/* border-box: padding + border are INCLUDED in the width (total 200px) */
+.q8-border-box { box-sizing: border-box; background: #86efac; }
+
+
+/* =====================================================================
+   Q9. Combined Effects (pseudo-class + transition + transform)
+   ===================================================================== */
+.q9-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;   /* distribute evenly */
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0;
+}
+
+.q9-btn {
+  display: inline-block;
+  padding: 14px 26px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.q9-grow   { background: #3b82f6; }
+.q9-rotate { background: #22c55e; }
+.q9-lift   { background: #f97316; }
+.q9-link   { background: #8b5cf6; }
+
+.q9-grow:hover   { background: #1d4ed8; transform: scale(1.15); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); }
+.q9-rotate:hover { background: #15803d; transform: rotate(-5deg) scale(1.05); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); }
+.q9-lift:hover   { background: #c2410c; transform: translateY(-8px); box-shadow: 0 12px 18px rgba(0, 0, 0, 0.3); }
+.q9-link:hover   { background: #6d28d9; transform: scale(1.1); box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); }
+
+.q9-btn:focus  { outline: 3px solid #fde047; outline-offset: 3px; }
+.q9-btn:active { transform: scale(0.95); }
+
+
+/* =====================================================================
+   Q10. Complete Mini User Interface Layout
+   ===================================================================== */
+.q10-page {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  min-height: 450px;
+  margin: 0 auto;
+  background: #f1f5f9;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.q10-page *, .q10-page *::before, .q10-page *::after { box-sizing: border-box; }
+
+.q10-header { padding: 12px 20px; color: #ffffff; background: #0f766e; }
+.q10-header h3 { margin: 0; }
+
+.q10-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: none;
+  padding: 20px;
+}
+
+.q10-card {
+  display: flex;
+  flex-wrap: wrap;           /* image and form stack on small screens */
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.q10-avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #0f766e;
+  border-radius: 50%;
+}
+
+.q10-form { flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; }
+
+.q10-form label { font-weight: bold; font-size: 0.9rem; }
+
+.q10-form input {
+  padding: 9px 12px;
+  font-size: 1rem;
+  border: 1px solid #94a3b8;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+
+.q10-form input:hover { border-color: #0f766e; }
+.q10-form input:focus { outline: none; border-color: #0f766e; box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.3); }
+
+.q10-actions { display: flex; gap: 10px; margin-top: 10px; }
+
+.q10-btn {
+  padding: 9px 18px;
+  font-size: 1rem;
+  color: #ffffff;
+  background: #0f766e;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.q10-btn:hover { background: #115e59; transform: translateY(-2px); }
+.q10-btn:focus { outline: 3px solid #99f6e4; }
+
+.q10-btn-alt { color: #0f766e; background: #ccfbf1; }
+.q10-btn-alt:hover { background: #99f6e4; }
+
+.q10-footer { padding: 10px; text-align: center; font-size: 0.85rem; color: #ffffff; background: #134e4a; }

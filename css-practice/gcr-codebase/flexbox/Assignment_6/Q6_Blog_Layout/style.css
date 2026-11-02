@@ -1,0 +1,22 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #233047; background: #fbfaf7; line-height: 1.6; }
+.blog-layout { display: grid; grid-template-columns: minmax(0, 1fr) 270px; grid-template-areas: "header header" "posts sidebar" "footer footer"; gap: 2rem; max-width: 1300px; margin: auto; padding: 0 2rem; }
+.blog-header { grid-area: header; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.5rem 0; border-bottom: 1px solid #e7e5df; }
+.brand { text-decoration: none; color: #26344a; font-size: 1.65rem; font-weight: 900; letter-spacing: -.06em; } .brand span { color: #c06b4e; }
+nav { display: flex; gap: 1.5rem; } nav a { color: #5c6677; text-decoration: none; font-weight: 700; } nav a:hover { color: #c06b4e; }
+.posts { grid-area: posts; min-width: 0; padding: 1.5rem 0 3rem; }
+.eyebrow, .category { color: #c06b4e; font-size: .72rem; font-weight: 900; letter-spacing: .12em; }
+.section-heading h1 { max-width: 720px; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1.12; margin: .4rem 0 2rem; }
+.post-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.post { overflow: hidden; background: #fff; border: 1px solid #ece9e1; border-radius: 15px; }
+.post img { display: block; width: 100%; height: 210px; object-fit: cover; }
+.post-copy { padding: 1.25rem; } .post-copy h2 { font-size: 1.35rem; line-height: 1.25; margin: .5rem 0; } .post-copy p:not(.category) { color: #687286; }
+.post-copy a, .newsletter a { color: #b45d41; font-weight: 800; text-decoration: none; }
+.sidebar { grid-area: sidebar; padding: 2rem 1.25rem; align-self: start; background: #f1eee6; border-radius: 16px; }
+.sidebar h2 { margin-top: 0; font-size: 1.2rem; }
+.sidebar > a { display: flex; justify-content: space-between; gap: 1rem; padding: .75rem 0; border-bottom: 1px solid #ded9ce; color: #566176; text-decoration: none; }
+.sidebar > a span { color: #a36b55; }
+.newsletter { margin-top: 2rem; padding: 1rem; background: #fff; border-radius: 12px; } .newsletter h3 { margin: 0; } .newsletter p { color: #687286; font-size: .9rem; }
+footer { grid-area: footer; text-align: center; border-top: 1px solid #e7e5df; padding: 1.5rem 0; color: #6c7585; font-size: .9rem; }
+@media (max-width: 800px) { .blog-layout { grid-template-columns: 1fr; grid-template-areas: "header" "posts" "sidebar" "footer"; gap: 1rem; padding: 0 1.25rem; } .post-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .sidebar { margin-bottom: 1rem; } }
+@media (max-width: 560px) { .blog-header { flex-direction: column; align-items: flex-start; } nav { flex-wrap: wrap; gap: 1rem; } .post-grid { grid-template-columns: 1fr; } .post img { height: 230px; } }
